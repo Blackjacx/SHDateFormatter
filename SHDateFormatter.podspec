@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'A short description of SHDateFormatter.'
   s.description      = <<-DESC
-A date formatter with support for the ISO8601 standard as well as many predefined date- and time formats.
+A date formatter supporting encoding as well as decoding of many different date and time formats including the often used ISO8601 standard.
                        DESC
   s.homepage         = 'https://github.com/blackjacx/SHDateFormatter'
   s.social_media_url = 'https://twitter.com/Blackjacxxx'
