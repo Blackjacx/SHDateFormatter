@@ -22,7 +22,7 @@ pod "SHDateFormatter"
 
 ## Author
 
-Stefan Herold, stefan.herold@flincteam.org
+Stefan Herold, stefan.herold@gmail.com
 
 ## License
 
