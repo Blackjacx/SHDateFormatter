@@ -1,0 +1,116 @@
+//
+//  SHDateFormatter.swift
+//  SHDateFormatter
+//
+//  Created by Stefan Herold on 07/10/2016.
+//  Copyright © 2016 StefanHerold. All rights reserved.
+//
+
+import UIKit
+
+/*
+ * This different formats can be used from within the app to obtain dates from
+ * strings or vice versa.
+ *
+ * @note Do not directly use FLCDateFormat_ShortTime_NoDate directly.
+ * Becuase there are the localized* methods that add a time suffix
+ * like '' or 'h' automatically.
+ */
+
+public enum SHDateFormat: String {
+    case shortTimeNoDate        = "HH:mm"
+    case noTimeShortDateNoYear  = "d.M."
+    case noTimeShortDate        = "d.M.yy"
+    case noTimeLongDate         = "d. MMMM yyyy"
+    case noTimeRelativeDate     = "noTimeRelativeDate"
+    /**
+     * The only correct date format for client/server communication.
+     * http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/
+     * https://developer.apple.com/library/ios/qa/qa1480/_index.html
+     */
+    case ISO8601                = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+}
+
+public struct SHDateFormatter {
+
+    public static let sharedInstance = SHDateFormatter()
+
+    static let formatter = DateFormatter()
+    static let serialDispatchQueue = DispatchQueue(label: "de.stefanherold.globalSerialDispatchQueue")
+
+    private init() {}
+
+    func configureForDateFormat(format: SHDateFormat, locale: Locale?) {
+        reset()
+
+        if locale != nil {
+            SHDateFormatter.formatter.locale = locale
+        }
+
+        let locale = SHDateFormatter.formatter.locale
+
+        switch format {
+        case .shortTimeNoDate: fallthrough
+        case .noTimeShortDateNoYear: fallthrough
+        case .noTimeShortDate: fallthrough
+        case .noTimeLongDate:
+            SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: locale)
+
+        case .ISO8601:
+            SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
+            SHDateFormatter.formatter.dateFormat = format.rawValue
+            SHDateFormatter.formatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+        case .noTimeRelativeDate:
+            SHDateFormatter.formatter.doesRelativeDateFormatting = true
+            SHDateFormatter.formatter.timeStyle = .none
+            SHDateFormatter.formatter.dateStyle = .full
+
+        }
+    }
+
+    func reset() {
+        SHDateFormatter.formatter.formatterBehavior = .default
+        SHDateFormatter.formatter.doesRelativeDateFormatting = false
+        SHDateFormatter.formatter.dateFormat = nil
+        SHDateFormatter.formatter.timeStyle = .none
+        SHDateFormatter.formatter.dateStyle = .none
+        // http://www.alexcurylo.com/2011/02/16/tip-nsdateformatter-localization/
+        SHDateFormatter.formatter.locale = Locale(identifier: Locale.preferredLanguages[0])
+        SHDateFormatter.formatter.timeZone = TimeZone.ReferenceType.default
+    }
+
+    /**
+     * Converts a given Date to String using the provided format and locale. This method runs thread safe.
+     *
+     * - parameter date: Date to convert from.
+     * - parameter format: The format used for the conversion.
+     * - returns: A String object representing the date.
+     */
+    public func stringFromDate(date: Date, format: SHDateFormat, locale: Locale? = nil) -> String {
+        var dateString: String = ""
+
+        SHDateFormatter.serialDispatchQueue.sync {
+            configureForDateFormat(format: format, locale: locale)
+            dateString = SHDateFormatter.formatter.string(from: date)
+        }
+        return dateString
+    }
+
+    /**
+     * Converts a given date String to Date using the provided format and locale. This method runs thread safe.
+     *
+     * - parameter dateString: Date string to convert from.
+     * - parameter format: The format used for the conversion.
+     * - returns: A Date object representing the date.
+     */
+    public func dateFromString(dateString: String, format: SHDateFormat, locale: Locale? = nil) -> Date? {
+        var date: Date?
+
+        SHDateFormatter.serialDispatchQueue.sync {
+            configureForDateFormat(format: format, locale: locale)
+            date = SHDateFormatter.formatter.date(from: dateString)
+        }
+        return date
+    }
+}

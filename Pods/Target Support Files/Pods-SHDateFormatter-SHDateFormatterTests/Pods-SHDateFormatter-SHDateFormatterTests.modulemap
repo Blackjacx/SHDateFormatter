@@ -1,0 +1,6 @@
+framework module Pods_SHDateFormatter_SHDateFormatterTests {
+  umbrella header "Pods-SHDateFormatter-SHDateFormatterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
