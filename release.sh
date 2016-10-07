@@ -50,4 +50,4 @@ git push --tag
 set -e
 
 # Command chain III
-pod trunk push "$PODSPEC"
+pod trunk push "$PODSPEC" --allow-warnings
