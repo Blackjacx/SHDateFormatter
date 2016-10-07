@@ -35,6 +35,13 @@ it, simply add the following line to your Podfile:
 pod "SHDateFormatter"
 ```
 
+## Next Steps
+
+* include more convenience functions to better support relative dates
+* tests for string2date conversion
+* travis CI integration
+* support swift package manager and carthage
+
 ## Author
 
 Stefan Herold, stefan.herold@gmail.com
