@@ -16,7 +16,11 @@ This framework supports encoding as well as decoding many different date and tim
 * `noTimeRelativeDate`     => Today, Tomorrow, ...
 * `ISO8601`                => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 
-The `ISO8601` format implements the standard for working with dates and times between client and server applications. A good explanation if this standard and how to work with it can be found in the [Apple Documenation](https://developer.apple.com/library/ios/qa/qa1480/_index.html) or on [Ole Begemanns Blog](http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/).    
+The `ISO8601` format implements the standard for working with dates and times between client and server applications. A good explanation if this standard and how to work with it can be found in the [Apple Documenation](https://developer.apple.com/library/ios/qa/qa1480/_index.html) or on [Ole Begemanns Blog](http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/).
+
+Additionally the following convenience functions are available on the SHDateFormatter sharedInstance which return default values if the input date is nil:
+* `localizedTimeStringFromDate(_:)` - will return `--:--` per default
+* ... to be continued ...
 
 ## Requirements
 
