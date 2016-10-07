@@ -493,7 +493,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE14E16B3F67BF7A3EF43FEF /* Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 678J5TKLZR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -508,7 +507,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA2E14270787976AFD103738 /* Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 678J5TKLZR;
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
