@@ -5,9 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
 [![Platform](https://img.shields.io/cocoapods/p/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
 
-## Example
+This framework supports encoding as well as decoding many different date and time format. At the moment the follownig are supported (see SHDateFormat): 
 
-At the moment the date formatter supports teh following date and time formats:
 * `shortWeekdayName`       => Sun, Mon, Tue, ...
 * `longWeekdayName`        => Sunday, Monday, Tuesday, ...
 * `shortTimeNoDate`        => 12:00 PM, 1:00 AM
@@ -17,9 +16,11 @@ At the moment the date formatter supports teh following date and time formats:
 * `noTimeRelativeDate`     => Today, Tomorrow, ...
 * `ISO8601`                => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 
+The `ISO8601` format implements the standard for working with dates and times between client and server applications. A good explanation if this standard and how to work with it can be found in the [Apple Documenation](https://developer.apple.com/library/ios/qa/qa1480/_index.html) or on [Ole Begemanns Blog](http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/).    
+
 ## Requirements
 
-The lib is tested with iOS version 9 and 10.
+The framework is written in Swift 3 and tested with iOS versions 9 and 10.
 
 ## Installation
 
