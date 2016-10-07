@@ -11,7 +11,6 @@
 		ADD60FD84BD9CBCA37992A68 /* Pods_SHDateFormatter_SHDateFormatterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F22964A245E6F2EE1E4560 /* Pods_SHDateFormatter_SHDateFormatterTests.framework */; };
 		B93B00FD1DA80679009773C6 /* SHDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B00FC1DA80679009773C6 /* SHDateFormatter.swift */; };
 		B93B010B1DA84144009773C6 /* SHDateFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B010A1DA84144009773C6 /* SHDateFormatter+Additions.swift */; };
-		B93B01111DA843C1009773C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B01101DA843C1009773C6 /* Globals.swift */; };
 		B99124AF1DA801D300A0B226 /* SHDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B99124A11DA801D300A0B226 /* SHDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B99124BD1DA804C800A0B226 /* DateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99124BC1DA804C800A0B226 /* DateFormatterSpec.swift */; };
 		B99124BF1DA804C800A0B226 /* SHDateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B991249F1DA801D300A0B226 /* SHDateFormatter.framework */; };
@@ -34,7 +33,8 @@
 		8200D82EAC8DEE5D6BF7921E /* Pods-SHDateFormatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter/Pods-SHDateFormatter.debug.xcconfig"; sourceTree = "<group>"; };
 		B93B00FC1DA80679009773C6 /* SHDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHDateFormatter.swift; sourceTree = "<group>"; };
 		B93B010A1DA84144009773C6 /* SHDateFormatter+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHDateFormatter+Additions.swift"; sourceTree = "<group>"; };
-		B93B01101DA843C1009773C6 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		B93B01141DA84EB1009773C6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B93B01151DA84EB1009773C6 /* SHDateFormatter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SHDateFormatter.podspec; path = ../SHDateFormatter.podspec; sourceTree = "<group>"; };
 		B991249F1DA801D300A0B226 /* SHDateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHDateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99124A11DA801D300A0B226 /* SHDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDateFormatter.h; sourceTree = "<group>"; };
 		B99124A21DA801D300A0B226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,10 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				B99124A21DA801D300A0B226 /* Info.plist */,
+				B93B01141DA84EB1009773C6 /* README.md */,
 				B99124A11DA801D300A0B226 /* SHDateFormatter.h */,
+				B93B01151DA84EB1009773C6 /* SHDateFormatter.podspec */,
 				B93B00FC1DA80679009773C6 /* SHDateFormatter.swift */,
 				B93B010A1DA84144009773C6 /* SHDateFormatter+Additions.swift */,
-				B93B01101DA843C1009773C6 /* Globals.swift */,
 			);
 			name = SHDateFormatter;
 			path = Source;
@@ -326,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B93B01111DA843C1009773C6 /* Globals.swift in Sources */,
 				B93B00FD1DA80679009773C6 /* SHDateFormatter.swift in Sources */,
 				B93B010B1DA84144009773C6 /* SHDateFormatter+Additions.swift in Sources */,
 			);

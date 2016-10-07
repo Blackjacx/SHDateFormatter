@@ -8,14 +8,9 @@
 
 import UIKit
 
-/*
- * This different formats can be used from within the app to obtain dates from
- * strings or vice versa.
- *
- * @note Do not directly use FLCDateFormat_ShortTime_NoDate directly.
- * Becuase there are the localized* methods that add a time suffix
- * like '' or 'h' automatically.
- */
+struct Calendars {
+    static let gregorian: Calendar = Calendar(identifier: .gregorian)
+}
 
 public enum SHDateFormat: String {
     case shortWeekdayName       = "EEE"

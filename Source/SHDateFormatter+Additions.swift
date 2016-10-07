@@ -9,7 +9,7 @@
 import Foundation
 
 extension SHDateFormatter {
-
+    
     func localizedTimeStringFromDate(date: Date?) -> String {
         guard let date = date else {
             return "--:--"

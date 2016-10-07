@@ -7,9 +7,19 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+At the moment the date formatter supports teh following date and time formats:
+* shortWeekdayName       => Sun, Mon, Tue, ...
+* longWeekdayName        => Sunday, Monday, Tuesday, ...
+* shortTimeNoDate        => 12:00 PM, 1:00 AM
+* noTimeShortDateNoYear  => 12/31
+* noTimeShortDate        => 12/31/2016
+* noTimeLongDate         => December 31, 2016
+* noTimeRelativeDate     => Today, Tomorrow, ...
+* ISO8601                => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 
 ## Requirements
+
+The lib is tested with iOS version 9 and 10.
 
 ## Installation
 

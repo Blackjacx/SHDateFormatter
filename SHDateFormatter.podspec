@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SHDateFormatter'
-  s.version          = '0.0.1'
+  s.version          = '0.9.0'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'A short description of SHDateFormatter.'
   s.description      = <<-DESC
