@@ -18,7 +18,9 @@ import UIKit
  */
 
 public enum SHDateFormat: String {
-    case shortTimeNoDate        = "HH:mm"
+    case shortWeekdayName       = "EEE"
+    case longWeekdayName        = "EEEE"
+    case shortTimeNoDate        = "shortTimeNoDate"
     case noTimeShortDateNoYear  = "d.M."
     case noTimeShortDate        = "d.M.yy"
     case noTimeLongDate         = "d. MMMM yyyy"
@@ -50,7 +52,8 @@ public struct SHDateFormatter {
         let locale = SHDateFormatter.formatter.locale
 
         switch format {
-        case .shortTimeNoDate: fallthrough
+        case .shortWeekdayName: fallthrough
+        case .longWeekdayName: fallthrough
         case .noTimeShortDateNoYear: fallthrough
         case .noTimeShortDate: fallthrough
         case .noTimeLongDate:
@@ -61,10 +64,14 @@ public struct SHDateFormatter {
             SHDateFormatter.formatter.dateFormat = format.rawValue
             SHDateFormatter.formatter.timeZone = TimeZone(secondsFromGMT: 0)
 
+        case .shortTimeNoDate:
+            SHDateFormatter.formatter.timeStyle = .short
+            SHDateFormatter.formatter.dateStyle = .none
+
         case .noTimeRelativeDate:
             SHDateFormatter.formatter.doesRelativeDateFormatting = true
             SHDateFormatter.formatter.timeStyle = .none
-            SHDateFormatter.formatter.dateStyle = .full
+            SHDateFormatter.formatter.dateStyle = .long
 
         }
     }
