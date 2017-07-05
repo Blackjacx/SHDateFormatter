@@ -17,7 +17,7 @@ env:
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
   - gem install cocoapods # Since Travis is not always on latest version
-  - pod install --repo-update
+  - pod install --repo-update # need to update the repo before pod install
 script:
   - set -o pipefail
   - xcodebuild -version
