@@ -13,7 +13,7 @@ env:
   - EXAMPLE_SCHEME="iOS Example"
   - IOS_SDK=iphonesimulator10.3
   matrix:
-    - DESTINATION="OS=10.3,name=iPhone 7"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"  POD_LINT="YES"    ENABLE_CODE_COVERAGE="YES"
+    - DESTINATION="platform:iOS Simulator, id:ABBD7191-486B-462F-80B4-AE08C5820DA1, OS:10.3.1, name:iPhone 7"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"  POD_LINT="YES"    ENABLE_CODE_COVERAGE="YES"
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
   - gem install cocoapods # Since Travis is not always on latest version
@@ -44,8 +44,8 @@ script:
 
   # Run `pod lib lint` if specified
   - if [ $POD_LINT == "YES" ]; then
-      pod lib lint;
+      pod lib lint --allow-warnings;
     fi
 
-after_success:
-  # - bash <(curl -s https://codecov.io/bash) -J "$IOS_FRAMEWORK_SCHEME"
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash) -J "$IOS_FRAMEWORK_SCHEME"
