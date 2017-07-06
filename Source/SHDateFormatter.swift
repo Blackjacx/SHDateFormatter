@@ -30,19 +30,18 @@ public enum SHDateFormat: String {
 
 public struct SHDateFormatter {
 
-    public static let sharedInstance = SHDateFormatter()
+    public static let shared = SHDateFormatter()
 
     static let formatter = DateFormatter()
-    static let serialDispatchQueue = DispatchQueue(label: "de.stefanherold.globalSerialDispatchQueue")
+    static let serialDispatchQueue = DispatchQueue(label: "com.dateFormatter.globalSerialDispatchQueue")
 
     private init() {}
 
-    func configureForDateFormat(format: SHDateFormat, locale: Locale?) {
+    private func configureForDateFormat(format: SHDateFormat, locale: Locale?, timeZone: TimeZone?) {
         reset()
 
-        if locale != nil {
-            SHDateFormatter.formatter.locale = locale
-        }
+        if locale != nil { SHDateFormatter.formatter.locale = locale }
+        if timeZone != nil { SHDateFormatter.formatter.timeZone = timeZone }
 
         let locale = SHDateFormatter.formatter.locale
 
@@ -79,7 +78,7 @@ public struct SHDateFormatter {
         SHDateFormatter.formatter.dateStyle = .none
         // http://www.alexcurylo.com/2011/02/16/tip-nsdateformatter-localization/
         SHDateFormatter.formatter.locale = Locale(identifier: Locale.preferredLanguages[0])
-        SHDateFormatter.formatter.timeZone = TimeZone.ReferenceType.default
+        SHDateFormatter.formatter.timeZone = TimeZone.current
     }
 
     /**
@@ -89,11 +88,11 @@ public struct SHDateFormatter {
      * - parameter format: The format used for the conversion.
      * - returns: A String object representing the date.
      */
-    public func stringFromDate(date: Date, format: SHDateFormat, locale: Locale? = nil) -> String {
+    public func stringFromDate(date: Date, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         var dateString: String = ""
 
         SHDateFormatter.serialDispatchQueue.sync {
-            configureForDateFormat(format: format, locale: locale)
+            configureForDateFormat(format: format, locale: locale, timeZone: timeZone)
             dateString = SHDateFormatter.formatter.string(from: date)
         }
         return dateString
@@ -106,11 +105,11 @@ public struct SHDateFormatter {
      * - parameter format: The format used for the conversion.
      * - returns: A Date object representing the date.
      */
-    public func dateFromString(dateString: String, format: SHDateFormat, locale: Locale? = nil) -> Date? {
+    public func dateFromString(dateString: String, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> Date? {
         var date: Date?
 
         SHDateFormatter.serialDispatchQueue.sync {
-            configureForDateFormat(format: format, locale: locale)
+            configureForDateFormat(format: format, locale: locale, timeZone: timeZone)
             date = SHDateFormatter.formatter.date(from: dateString)
         }
         return date
