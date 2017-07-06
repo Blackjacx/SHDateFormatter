@@ -30,7 +30,7 @@ public enum SHDateFormat: String {
 
 public struct SHDateFormatter {
 
-    public static let sharedInstance = SHDateFormatter()
+    public static let shared = SHDateFormatter()
 
     static let formatter = DateFormatter()
     static let serialDispatchQueue = DispatchQueue(label: "de.stefanherold.globalSerialDispatchQueue")
