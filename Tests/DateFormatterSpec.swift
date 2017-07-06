@@ -25,40 +25,32 @@ class DateFormatterSpec: QuickSpec {
             let dateCreationTimeZone = TimeZone(identifier: "GMT")!
 
             func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
+
                 // Constructing dates correctly: http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-1/
-                let components: DateComponents = {
-                    var comps: DateComponents = DateComponents()
-                    comps.calendar =  Calendars.gregorian
-                    comps.year = year
-                    comps.month = month
-                    comps.day = day
-                    comps.hour = hour
-                    comps.minute = min
-                    comps.second = sec
-                    comps.timeZone = dateCreationTimeZone
-                    return comps
-                }()
-
-                let date = Calendars.gregorian.date(from: components)
-                return date!
-            }
-
-            func yesterdayNoon() -> Date {
-                let date = todayNoon().addingTimeInterval(-86400)
-                return date
+                let comps = DateComponents(
+                    calendar: Calendars.gregorian,
+                    timeZone: dateCreationTimeZone,
+                    year: year,
+                    month: month,
+                    day: day,
+                    hour: hour,
+                    minute: min,
+                    second: sec)
+                return comps.date!
             }
 
             func todayNoon() -> Date {
-                var components = Calendars.gregorian.dateComponents([.year, .month, .day, .hour, .minute], from: Date())
-                components.hour = 12
-                components.minute = 0
-                let date = Calendars.gregorian.date(from: components)
-                return date!
-            }
 
-            func tomorrowNoon() -> Date {
-                let date = todayNoon().addingTimeInterval(86400)
-                return date
+                var now = Calendars.gregorian.dateComponents([.year, .month, .day, .hour, .minute], from: Date())
+                // Constructing dates correctly: http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-1/
+                let comps = DateComponents(
+                    calendar: Calendars.gregorian,
+                    timeZone: dateCreationTimeZone,
+                    year: now.year,
+                    month: now.month,
+                    day: now.day,
+                    hour: 12)
+                return comps.date!
             }
 
             it("Verifies that the time zome used for date creation is GMT") {
@@ -339,7 +331,7 @@ class DateFormatterSpec: QuickSpec {
 
             context("Test Yesterday Noon") {
 
-                let testDate = yesterdayNoon()
+                let testDate = todayNoon().minus24Hours()
 
                 context("\(deDE_Locale.identifier)") {
 
@@ -427,7 +419,7 @@ class DateFormatterSpec: QuickSpec {
 
             context("Test Tomorrow Noon") {
 
-                let testDate = tomorrowNoon()
+                let testDate = todayNoon().plus24Hours()
 
                 context("\(deDE_Locale.identifier)") {
 
