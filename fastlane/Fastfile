@@ -22,7 +22,7 @@
 # 		IMPORTANT: Use the default options !!!
 #
 #		and then run:
-# 			    bundle exec fastlane release_production framework:SHSearchBar version:"<YOUR_VERSION_HERE>"
+# 			    bundle exec fastlane release_to_cocoapods framework:SHSearchBar version:"<YOUR_VERSION_HERE>"
 
 # POSSIBLE ADDONS
 # => update_info_plist
@@ -32,14 +32,15 @@
 # => https://docs.fastlane.tools/actions/
 # => https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
 
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
+# This is the minimum version number required. 
+# Update this, if you use features of a newer version.
 fastlane_version "2.45.0"
 
 # default_platform :ios
 
 before_all do
-  cocoapods
+  # update_fastlane
+  # cocoapods
 end
 
 
@@ -68,8 +69,8 @@ lane :run_framework_tests do |options|
   workspace = "#{framework}.xcworkspace"
 
   scan(
-    workspace: "#{workspace}",
-    scheme: "#{framework}",
+    workspace: workspace,
+    scheme: framework,
     clean: true,
     devices: ["iPhone 7"],
     skip_build: true,
@@ -87,11 +88,16 @@ desc "Updates podspec file"
 desc "Pushes podspec file to Cocoapods"
 desc "Pushes releases to github"
 desc "Commits and pushes changes to remote and tags the release commit"
-lane :release do |options|
+lane :release_to_cocoapods do |options|
 
-  unless options[:framework] && options[:version]
-    print_usage
+  if !options[:version]
+    raise "No version specified".red
   end
+
+  if !options[:framework]
+    raise "No framework specified".red
+  end
+
   framework = options[:framework]
   version = options[:version]
 
@@ -100,13 +106,13 @@ lane :release do |options|
   ensure_git_branch(branch: "develop")
   git_pull
   pod_lib_lint(allow_warnings: false)
-  run_framework_tests framework: "#{framework}", version: "#{version}"
+  run_framework_tests(framework: framework, version: version)
 
   sh "git flow release start #{version}"
   
-  increment_framework_version framework: "#{framework}", version: "#{version}"
-  update_framework_podspec framework: "#{framework}", version: "#{version}"
-  push_github_release version: "#{version}"
+  increment_framework_version(framework: framework, version: version)
+  update_framework_podspec(framework: framework, version: version)
+  # push_github_release(framework: framework, version: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
@@ -118,19 +124,13 @@ lane :release do |options|
   sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
 
   # push to develop + push tags
-  push_to_git_remote(
-    local_branch: 'develop',
-    force: true,
-  )
+  push_to_git_remote(local_branch: "develop", force: true)
 
   # push to master + push tags
-  push_to_git_remote(
-    local_branch: 'master',
-    force: true,
-  )
+  push_to_git_remote(local_branch: "master", force: true)
 
   # Needs to be done at the end (expects git tag to be available)
-  push_framework_podspec framework: "#{framework}"
+  push_framework_podspec(framework: framework)
 end
 
 
@@ -139,24 +139,23 @@ end
 #                          PRIVATE SECTION
 ###############################################################################
 
-desc "Increments CFBundleVersion by one and sets CFBundleShortVersionString to \"version\""
+desc "Increments CFBundleVersion by one and sets CFBundleShortVersionString"
 private_lane :increment_framework_version do |options|
 
-  unless options[:framework] && options[:version]
-    print_usage
+  if !options[:version]
+    raise "No version specified".red
   end
+
+  if !options[:framework]
+    raise "No framework specified".red
+  end
+
   framework = options[:framework]
   version = options[:version]
   project = "#{framework}.xcodeproj"
 
-  increment_version_number(
-    xcodeproj: "#{project}",
-    version_number: "#{version}"
-  )
-
-  increment_build_number(
-    xcodeproj: "#{project}"
-  )
+  increment_version_number(xcodeproj: project, version_number: version)
+  increment_build_number(xcodeproj: project)
 end
 
 
@@ -164,19 +163,19 @@ end
 desc "Updates framework podspec version"
 private_lane :update_framework_podspec do |options|
 
-  unless options[:framework] && options[:version] && options[:path]
-    print_usage
+  if !options[:version]
+    raise "No version specified".red
   end
+
+  if !options[:framework]
+    raise "No framework specified".red
+  end
+
   framework = options[:framework]
   version = options[:version]
-  path = options[:path]
+  podspec = "#{framework}.podspec"
 
-  podspec = File.join("#{path}", "#{framework}.podspec")
-
-  version = version_bump_podspec(
-    path: "#{podspec}",
-    version_number: "#{version}"
-  )
+  version_bump_podspec(path: podspec, version_number: version)
 end
 
 
@@ -184,16 +183,13 @@ end
 desc "Pushes framework podspec to Cocoapods specs"
 private_lane :push_framework_podspec do |options|
 
-  unless options[:framework] && options[:version]
-    print_usage
+  if !options[:framework]
+    raise "No framework specified".red
   end
   framework = options[:framework]
-  version = options[:version]
   podspec = "#{framework}.podspec"
 
-  pod_push(
-    path: "#{podspec}"
-  )
+  pod_push(path: podspec)
 end
 
 
@@ -201,8 +197,12 @@ end
 desc "Creates a github release with a git commit changelog"
 private_lane :push_github_release do |options|
 
-  unless options[:framework] && options[:version]
-    print_usage
+  if !options[:version]
+    raise "No version specified".red
+  end
+
+  if !options[:framework]
+    raise "No framework specified".red
   end
 
   framework = options[:framework]
@@ -213,22 +213,17 @@ private_lane :push_github_release do |options|
   changelog=read_changelog
 
   stamp_changelog(
-    section_identifier: "#{version}", # Stamp Unreleased section with newly released build number
-    git_tag: "#{version}" # Specify reference to git tag associated with this section
+    section_identifier: version, # Stamp Unreleased section with newly released build number
+    git_tag: version # Specify reference to git tag associated with this section
   )
 
   github_release = set_github_release(
     repository_name: "blackjacx/#{framework}",
     api_token: ENV["GITHUB_TOKEN"],
-    name: "#{version}",
-    tag_name: "#{version}",
+    name: version,
+    tag_name: version,
     description: ("#{changelog}" rescue "No changelog provided"),
     commitish: "master",
     # upload_assets: ["example_integration.ipa", "./pkg/built.gem"],
   )
-end
-
-desc "Prints the usage description"
-private_lane :print_usage do |options|
-  raise "Usage: \"name_of_lane\" framework:\"framework_name\" version:\"version\"".red
 end

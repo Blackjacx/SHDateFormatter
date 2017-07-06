@@ -34,9 +34,9 @@ xcode-select --install
 fastlane run_framework_tests
 ```
 Runs tests using scan
-### release
+### release_to_cocoapods
 ```
-fastlane release
+fastlane release_to_cocoapods
 ```
 Creates a release branch
 
