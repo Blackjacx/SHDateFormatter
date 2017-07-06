@@ -1,6 +1,6 @@
 # SHDateFormatter
 
-[![Build Status](https://travis-ci.org/Blackjacx/SHDateFormatter.svg?branch=master)](https://travis-ci.org/Blackjacx/SHDateFormatter)
+[![Build Status](https://www.bitrise.io/app/78d4ba26d291582f/status.svg?token=A3FT8LHA7xARwprjGkbbRg&branch=develop)](https://www.bitrise.io/app/78d4ba26d291582f)
 [![Version](https://img.shields.io/cocoapods/v/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
 [![License](https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
 [![Platform](https://img.shields.io/cocoapods/p/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
