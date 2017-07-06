@@ -11,7 +11,7 @@ A date formatter supporting encoding as well as decoding of many different date 
   s.author           = { 'Stefan Herold' => 'stefan.herold@gmail.com' }
   s.source           = { :git => 'https://github.com/blackjacx/SHDateFormatter.git', :tag => s.version.to_s }
   
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'Source/**/*'
 end

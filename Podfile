@@ -1,5 +1,5 @@
 target 'SHDateFormatter' do
-  platform :ios, '9.3'
+  platform :ios, '8.0'
   use_frameworks!
 
   # ignore all warnings from all pods
