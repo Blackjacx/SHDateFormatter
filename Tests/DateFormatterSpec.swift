@@ -17,7 +17,7 @@ let frFR_Locale = Locale(identifier: "fr_FR")
 
 class DateFormatterSpec: QuickSpec {
 
-    static let timeZone = TimeZone(identifier: "Europe/Berlin")!
+    static let timeZone = TimeZone(identifier: "GMT")!
 
     static func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
         // Constructing dates correctly: http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-1/
@@ -33,6 +33,7 @@ class DateFormatterSpec: QuickSpec {
             comps.timeZone = timeZone
             return comps
         }()
+
         let date = Calendars.gregorian.date(from: components)
         return date!
     }
@@ -59,25 +60,13 @@ class DateFormatterSpec: QuickSpec {
 
         describe("DateFormatter") {
 
-            it("Verifies that the currently set locale is de_DE") {
-                expect(Locale.current.identifier) == "de_DE"
-            }
-
-            it("Verifies that the preferred language is de") {
-                expect(Locale.preferredLanguages[0]) == "de"
-            }
-
             it("Verifies that the time zome is Europe/Berlin") {
-                expect(type(of: self).timeZone.identifier) == "Europe/Berlin"
-            }
-
-            it("Verifies that daylight saving time is on") {
-                expect(type(of: self).timeZone.isDaylightSavingTime()) == true
+                expect(type(of: self).timeZone.identifier) == "GMT"
             }
 
             context("Test 2000/01/01/12:00am") {
 
-                let testDate = type(of: self).dateFrom(year: 2000, month: 1, day: 1, hour: 0, min: 0, sec: 0) // 12 am a Saturday
+                let testDate = type(of: self).dateFrom(year: 1999, month: 12, day: 31, hour: 23, min: 00, sec: 0) // 12 am a Saturday
 
                 context("\(deDE_Locale.identifier)") {
 
@@ -211,7 +200,7 @@ class DateFormatterSpec: QuickSpec {
 
             context("Test 2000/01/02/12:00pm") {
 
-                let testDate = type(of: self).dateFrom(year: 2000, month: 1, day: 2, hour: 12, min: 0, sec: 0) // 12 pm a Sunday
+                let testDate = type(of: self).dateFrom(year: 2000, month: 1, day: 2, hour: 11, min: 0, sec: 0) // 12 pm a Sunday
 
                 context("\(deDE_Locale.identifier)") {
 
