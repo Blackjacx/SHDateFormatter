@@ -12,6 +12,7 @@ env:
   - IOS_FRAMEWORK_SCHEME="SHDateFormatter"
   - EXAMPLE_SCHEME="iOS Example"
   - IOS_SDK=iphonesimulator11.0
+  - LANGUAGE_OPTIONS="-testLanguage de -testRegion DE"
   matrix:
     - DESTINATION="platform=iOS Simulator,name=iPhone 7"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"  POD_LINT="YES"    ENABLE_CODE_COVERAGE="YES"
 before_install:
@@ -25,16 +26,16 @@ script:
 
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug -enableCodeCoverage "$ENABLE_CODE_COVERAGE" -testLanguage de ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES build test | xcpretty -c;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug -enableCodeCoverage "$ENABLE_CODE_COVERAGE" "$LANGUAGE_OPTIONS" ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES build test | xcpretty -c;
     else
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug -testLanguage de ONLY_ACTIVE_ARCH=YES build | xcpretty -c;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug "$LANGUAGE_OPTIONS" ONLY_ACTIVE_ARCH=YES build | xcpretty -c;
     fi
 
   # Build Framework in Release and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release -enableCodeCoverage "$ENABLE_CODE_COVERAGE" -testLanguage de ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES build test | xcpretty -c;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release -enableCodeCoverage "$ENABLE_CODE_COVERAGE" "$LANGUAGE_OPTIONS" ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES build test | xcpretty -c;
     else
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release -testLanguage de ONLY_ACTIVE_ARCH=YES build | xcpretty -c;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release "$LANGUAGE_OPTIONS" ONLY_ACTIVE_ARCH=YES build | xcpretty -c;
     fi
 
   # Build Example in Debug if specified
