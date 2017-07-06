@@ -33,7 +33,7 @@ public struct SHDateFormatter {
     public static let shared = SHDateFormatter()
 
     static let formatter = DateFormatter()
-    static let serialDispatchQueue = DispatchQueue(label: "de.stefanherold.globalSerialDispatchQueue")
+    static let serialDispatchQueue = DispatchQueue(label: "com.dateFormatter.globalSerialDispatchQueue")
 
     private init() {}
 
