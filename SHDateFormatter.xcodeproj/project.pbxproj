@@ -14,6 +14,7 @@
 		B99124AF1DA801D300A0B226 /* SHDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B99124A11DA801D300A0B226 /* SHDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B99124BD1DA804C800A0B226 /* DateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99124BC1DA804C800A0B226 /* DateFormatterSpec.swift */; };
 		B99124BF1DA804C800A0B226 /* SHDateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B991249F1DA801D300A0B226 /* SHDateFormatter.framework */; };
+		B9E018921F0E8D6C00E8737A /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E018911F0E8D6C00E8737A /* Date+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		B99124BA1DA804C800A0B226 /* SHDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99124BC1DA804C800A0B226 /* DateFormatterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterSpec.swift; sourceTree = "<group>"; };
 		B99124BE1DA804C800A0B226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9E018911F0E8D6C00E8737A /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		BA2E14270787976AFD103738 /* Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter-SHDateFormatterTests/Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE14E16B3F67BF7A3EF43FEF /* Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter-SHDateFormatterTests/Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 		B99124A01DA801D300A0B226 /* SHDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
+				B9E018911F0E8D6C00E8737A /* Date+Utils.swift */,
 				B99124A21DA801D300A0B226 /* Info.plist */,
 				B93B01141DA84EB1009773C6 /* README.md */,
 				B99124A11DA801D300A0B226 /* SHDateFormatter.h */,
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93B00FD1DA80679009773C6 /* SHDateFormatter.swift in Sources */,
+				B9E018921F0E8D6C00E8737A /* Date+Utils.swift in Sources */,
 				B93B010B1DA84144009773C6 /* SHDateFormatter+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
