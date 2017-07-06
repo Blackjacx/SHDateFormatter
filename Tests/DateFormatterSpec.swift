@@ -12,9 +12,10 @@ import Nimble
 @testable import SHDateFormatter
 
 class DateFormatterSpec: QuickSpec {
+    static let timeZone = TimeZone(identifier: "Europe/Berlin")!
+
     static func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
         // Constructing dates correctly: http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-1/
-        let berlinTime = TimeZone(identifier: "Europe/Berlin")
         let components: DateComponents = {
             var comps: DateComponents = DateComponents()
             comps.calendar =  Calendars.gregorian
@@ -24,7 +25,7 @@ class DateFormatterSpec: QuickSpec {
             comps.hour = hour
             comps.minute = min
             comps.second = sec
-            comps.timeZone = berlinTime
+            comps.timeZone = timeZone
             return comps
         }()
         let date = Calendars.gregorian.date(from: components)
@@ -49,6 +50,10 @@ class DateFormatterSpec: QuickSpec {
         return date
     }
 
+    var isDST: Bool {
+        return type(of: self).timeZone.isDaylightSavingTime()
+    }
+
     lazy var testDates: [Date] = {
         return [
             DateFormatterSpec.dateFrom(year: 2000, month: 1, day: 1, hour: 0, min: 0, sec: 0), // 12 am a Saturday
@@ -67,7 +72,7 @@ class DateFormatterSpec: QuickSpec {
              */
             testDates[0] : [
                 "de_DE" : [
-                    .shortWeekdayName:          "Sa",
+                    .shortWeekdayName:          isDST ? "Sa" : "Fr",
                     .longWeekdayName:           "Samstag",
                     .shortTimeNoDate:           "00:00",
                     .noTimeShortDateNoYear :    "1.1.",
