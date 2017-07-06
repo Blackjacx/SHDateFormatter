@@ -11,10 +11,6 @@ import Quick
 import Nimble
 @testable import SHDateFormatter
 
-let deDE_Locale = Locale(identifier: "de_DE")
-let enEN_Locale = Locale(identifier: "en_EN")
-let frFR_Locale = Locale(identifier: "fr_FR")
-
 class DateFormatterSpec: QuickSpec {
 
     override func spec() {
@@ -23,6 +19,10 @@ class DateFormatterSpec: QuickSpec {
 
             let formattingTimeZone = TimeZone(identifier: "Europe/Berlin")!
             let dateCreationTimeZone = TimeZone(identifier: "GMT")!
+
+            let deDE_Locale = Locale(identifier: "de_DE")
+            let enEN_Locale = Locale(identifier: "en_EN")
+            let frFR_Locale = Locale(identifier: "fr_FR")
 
             func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
 
