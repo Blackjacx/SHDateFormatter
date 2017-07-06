@@ -61,11 +61,10 @@ end
 desc "Runs tests using scan"
 lane :run_framework_tests do |options|
 
-	unless options[:framework] && options[:version] && options[:path]
-    print_usage
+  unless options[:framework] && options[:path]
+    raise "Usage: \"name_of_lane\" framework:\"framework_name\" path:\"/Users/name/dev/pods/yourPod\"".red
   end
   framework = options[:framework]
-  version = options[:version]
   path = options[:path]
 
   workspace = File.join("#{project_path}", "#{framework}.xcworkspace")
