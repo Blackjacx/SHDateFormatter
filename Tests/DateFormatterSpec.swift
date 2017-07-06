@@ -12,6 +12,7 @@ import Nimble
 @testable import SHDateFormatter
 
 class DateFormatterSpec: QuickSpec {
+
     static let timeZone = TimeZone(identifier: "Europe/Berlin")!
 
     static func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
@@ -202,16 +203,23 @@ class DateFormatterSpec: QuickSpec {
                     .noTimeRelativeDate:        "demain",
                 ],
             ],
-        ]
+            ]
 
         describe("dateFormatter") {
+
+            context("For The Currently Set Locale") {
+
+                it("prints the curtrent locale") {
+                    print("Current Locale: \( Locale(identifier: Locale.preferredLanguages[0]) )")
+                }
+            }
 
             context("for all locales") {
                 it("formats dates correctly") {
                     for (testDate, expectationsForLocaleID) in expectationsForDate {
                         for (localeID, expectationsForFormat) in expectationsForLocaleID {
                             for (format, expectation) in expectationsForFormat {
-                                print("TimeZone: \(type(of: self).timeZone), isDST: \(type(of: self).timeZone)")
+                                print("TimeZone: \(type(of: self).timeZone), isDST: \(type(of: self).timeZone.isDaylightSavingTime())")
                                 let locale = Locale(identifier: localeID)
                                 let actualResult = SHDateFormatter.sharedInstance.stringFromDate(date: testDate, format: format, locale: locale)
                                 XCTAssertEqual(actualResult, expectation, "Failed for locale '\(localeID)' format '\(format)' and testDate '\(testDate)'")
