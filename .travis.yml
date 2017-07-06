@@ -2,7 +2,7 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8.3
+osx_image: xcode9
 language: objective-c
 env:
   global:
@@ -11,7 +11,7 @@ env:
   - WORKSPACE=SHDateFormatter.xcworkspace
   - IOS_FRAMEWORK_SCHEME="SHDateFormatter"
   - EXAMPLE_SCHEME="iOS Example"
-  - IOS_SDK=iphonesimulator10.3
+  - IOS_SDK=iphonesimulator11.0
   matrix:
     - DESTINATION="platform=iOS Simulator,name=iPhone 7"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"  POD_LINT="YES"    ENABLE_CODE_COVERAGE="YES"
 before_install:
