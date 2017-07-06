@@ -211,6 +211,7 @@ class DateFormatterSpec: QuickSpec {
                     for (testDate, expectationsForLocaleID) in expectationsForDate {
                         for (localeID, expectationsForFormat) in expectationsForLocaleID {
                             for (format, expectation) in expectationsForFormat {
+                                print("TimeZone: \(type(of: self).timeZone), isDST: \(type(of: self).timeZone)")
                                 let locale = Locale(identifier: localeID)
                                 let actualResult = SHDateFormatter.sharedInstance.stringFromDate(date: testDate, format: format, locale: locale)
                                 XCTAssertEqual(actualResult, expectation, "Failed for locale '\(localeID)' format '\(format)' and testDate '\(testDate)'")
