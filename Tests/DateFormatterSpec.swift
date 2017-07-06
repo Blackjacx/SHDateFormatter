@@ -60,10 +60,6 @@ class DateFormatterSpec: QuickSpec {
 
                 let testDate = dateFrom(year: 2000, month: 1, day: 1, hour: 0, min: 0, sec: 0) // 12 am a Saturday with DST
 
-                it("Doesnt Have Daylight Saving Time") {
-                    expect(timeZone.isDaylightSavingTime(for: testDate)) == false
-                }
-
                 context("\(deDE_Locale.identifier)") {
 
                     it("ShortWeekdayName") {
@@ -197,10 +193,6 @@ class DateFormatterSpec: QuickSpec {
             context("Test 2000/01/02/12:00pm") {
 
                 let testDate = dateFrom(year: 2000, month: 1, day: 2, hour: 12, min: 0, sec: 0) // 12 pm a Sunday
-
-                it("Doesnt Have Daylight Saving Time") {
-                    expect(timeZone.isDaylightSavingTime(for: testDate)) == false
-                }
 
                 context("\(deDE_Locale.identifier)") {
 
