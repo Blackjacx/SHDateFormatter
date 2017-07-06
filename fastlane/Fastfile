@@ -61,13 +61,11 @@ end
 desc "Runs tests using scan"
 lane :run_framework_tests do |options|
 
-  unless options[:framework] && options[:path]
-    raise "Usage: \"name_of_lane\" framework:\"framework_name\" path:\"/Users/name/dev/pods/yourPod\"".red
+  unless options[:framework]
+    raise "Usage: \"name_of_lane\" framework:\"framework_name\"".red
   end
   framework = options[:framework]
-  path = options[:path]
-
-  workspace = File.join("#{project_path}", "#{framework}.xcworkspace")
+  workspace = "#{framework}.xcworkspace"
 
   scan(
     workspace: "#{workspace}",
@@ -91,24 +89,23 @@ desc "Pushes releases to github"
 desc "Commits and pushes changes to remote and tags the release commit"
 lane :release do |options|
 
-  unless options[:framework] && options[:version] && options[:path]
+  unless options[:framework] && options[:version]
     print_usage
   end
   framework = options[:framework]
   version = options[:version]
-  path = options[:path]
 
   # Ensure the source code is OK and tests are green
   ensure_git_status_clean
   ensure_git_branch(branch: "develop")
   git_pull
   pod_lib_lint(allow_warnings: false)
-  run_framework_tests framework: "#{framework}" version: "#{version}" path: "#{path}"
+  run_framework_tests framework: "#{framework}", version: "#{version}"
 
   sh "git flow release start #{version}"
   
-  increment_framework_version framework: "#{framework}", version: "#{version}" path: "#{path}"
-  update_framework_podspec framework: "#{framework}", version: "#{version}" path: "#{path}"
+  increment_framework_version framework: "#{framework}", version: "#{version}"
+  update_framework_podspec framework: "#{framework}", version: "#{version}"
   push_github_release version: "#{version}"
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
@@ -145,14 +142,12 @@ end
 desc "Increments CFBundleVersion by one and sets CFBundleShortVersionString to \"version\""
 private_lane :increment_framework_version do |options|
 
-  unless options[:framework] && options[:version] && options[:path]
+  unless options[:framework] && options[:version]
     print_usage
   end
   framework = options[:framework]
   version = options[:version]
-  path = options[:path]
-
-  project = File.join("#{path}", "#{framework}.xcodeproj")
+  project = "#{framework}.xcodeproj"
 
   increment_version_number(
     xcodeproj: "#{project}",
@@ -189,14 +184,12 @@ end
 desc "Pushes framework podspec to Cocoapods specs"
 private_lane :push_framework_podspec do |options|
 
-  unless options[:framework] && options[:version] && options[:path]
+  unless options[:framework] && options[:version]
     print_usage
   end
   framework = options[:framework]
   version = options[:version]
-  path = options[:path]
-
-  podspec = File.join("#{path}", "#{framework}.podspec")
+  podspec = "#{framework}.podspec"
 
   pod_push(
     path: "#{podspec}"
@@ -208,13 +201,12 @@ end
 desc "Creates a github release with a git commit changelog"
 private_lane :push_github_release do |options|
 
-  unless options[:framework] && options[:version] && options[:path]
+  unless options[:framework] && options[:version]
     print_usage
   end
 
   framework = options[:framework]
   version = options[:version]
-  path = options[:path]
 
 
   # using changelog fastlane plugin
@@ -238,5 +230,5 @@ end
 
 desc "Prints the usage description"
 private_lane :print_usage do |options|
-  raise "Usage: \"name_of_lane\" framework:\"framework_name\" version:\"version\" path:\"/Users/name/dev/pods/yourPod\"".red
+  raise "Usage: \"name_of_lane\" framework:\"framework_name\" version:\"version\"".red
 end

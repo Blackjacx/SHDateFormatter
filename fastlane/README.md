@@ -29,9 +29,9 @@ xcode-select --install
 </table>
 
 # Available Actions
-### tests
+### run_framework_tests
 ```
-fastlane tests
+fastlane run_framework_tests
 ```
 Runs tests using scan
 ### release
@@ -51,11 +51,6 @@ Pushes podspec file to Cocoapods
 Pushes releases to github
 
 Commits and pushes changes to remote and tags the release commit
-### increment_framework_version
-```
-fastlane increment_framework_version
-```
-Increment framework version
 
 ----
 
