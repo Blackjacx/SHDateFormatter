@@ -39,8 +39,8 @@ fastlane_version "2.45.0"
 # default_platform :ios
 
 before_all do
-  # update_fastlane
-  # cocoapods
+  update_fastlane
+  cocoapods
 end
 
 
@@ -62,9 +62,10 @@ end
 desc "Runs tests using scan"
 lane :run_framework_tests do |options|
 
-  unless options[:framework]
-    raise "Usage: \"name_of_lane\" framework:\"framework_name\"".red
+  if !options[:framework]
+    raise "No framework specified".red
   end
+
   framework = options[:framework]
   workspace = "#{framework}.xcworkspace"
 
@@ -90,12 +91,8 @@ desc "Pushes releases to github"
 desc "Commits and pushes changes to remote and tags the release commit"
 lane :release_to_cocoapods do |options|
 
-  if !options[:version]
-    raise "No version specified".red
-  end
-
-  if !options[:framework]
-    raise "No framework specified".red
+  if !options[:framework] || !options[:version]
+    raise "No framework or no version specified".red
   end
 
   framework = options[:framework]
@@ -142,12 +139,8 @@ end
 desc "Increments CFBundleVersion by one and sets CFBundleShortVersionString"
 private_lane :increment_framework_version do |options|
 
-  if !options[:version]
-    raise "No version specified".red
-  end
-
-  if !options[:framework]
-    raise "No framework specified".red
+  if !options[:framework] || !options[:version]
+    raise "No framework or no version specified".red
   end
 
   framework = options[:framework]
@@ -186,6 +179,7 @@ private_lane :push_framework_podspec do |options|
   if !options[:framework]
     raise "No framework specified".red
   end
+  
   framework = options[:framework]
   podspec = "#{framework}.podspec"
 
@@ -197,12 +191,8 @@ end
 desc "Creates a github release with a git commit changelog"
 private_lane :push_github_release do |options|
 
-  if !options[:version]
-    raise "No version specified".red
-  end
-
-  if !options[:framework]
-    raise "No framework specified".red
+  if !options[:framework] || !options[:version]
+    raise "No framework or no version specified".red
   end
 
   framework = options[:framework]
