@@ -88,8 +88,12 @@ public struct SHDateFormatter {
      * - parameter format: The format used for the conversion.
      * - returns: A String object representing the date.
      */
-    public func stringFromDate(date: Date, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
+    public func stringFromDate(date: Date?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         var dateString: String = ""
+
+        guard let date = date else {
+            return dateString
+        }
 
         SHDateFormatter.serialDispatchQueue.sync {
             configureForDateFormat(format: format, locale: locale, timeZone: timeZone)
@@ -105,8 +109,12 @@ public struct SHDateFormatter {
      * - parameter format: The format used for the conversion.
      * - returns: A Date object representing the date.
      */
-    public func dateFromString(dateString: String, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> Date? {
+    public func dateFromString(dateString: String?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> Date? {
         var date: Date?
+
+        guard let dateString = dateString else {
+            return date
+        }
 
         SHDateFormatter.serialDispatchQueue.sync {
             configureForDateFormat(format: format, locale: locale, timeZone: timeZone)
