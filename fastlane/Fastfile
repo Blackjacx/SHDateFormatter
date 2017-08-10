@@ -14,15 +14,15 @@
 #
 
 # NOTE: To use faslane install:
-# 			    gem install bundler 
+#           gem install bundler 
 #           brew install git-flow
 #           brew install apledoc
 #
-# 		Git-flow witll be configured upon installation or the first run of fastlane.
-# 		IMPORTANT: Use the default options !!!
+#     Git-flow witll be configured upon installation or the first run of fastlane.
+#     IMPORTANT: Use the default options !!!
 #
-#		and then run:
-# 			    bundle exec fastlane release_to_cocoapods framework:SHSearchBar version:"<YOUR_VERSION_HERE>"
+#   and then run:
+#           bundle exec fastlane release_to_cocoapods framework:SHSearchBar version:"<YOUR_VERSION_HERE>"
 
 # POSSIBLE ADDONS
 # => update_info_plist
@@ -39,7 +39,7 @@ fastlane_version "2.45.0"
 # default_platform :ios
 
 before_all do
-  update_fastlane
+  # update_fastlane
   cocoapods
 end
 
@@ -103,13 +103,13 @@ lane :release_to_cocoapods do |options|
   ensure_git_branch(branch: "develop")
   git_pull
   pod_lib_lint(allow_warnings: false)
-  run_framework_tests(framework: framework, version: version)
+  # run_framework_tests(framework: framework, version: version)
 
   sh "git flow release start #{version}"
   
   increment_framework_version(framework: framework, version: version)
   update_framework_podspec(framework: framework, version: version)
-  # push_github_release(framework: framework, version: version)
+  push_github_release(framework: framework, version: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
@@ -198,13 +198,14 @@ private_lane :push_github_release do |options|
   framework = options[:framework]
   version = options[:version]
 
-
-  # using changelog fastlane plugin
-  changelog=read_changelog
+  changelog=read_changelog(
+    changelog_path: './CHANGELOG.md',	# Specify path to CHANGELOG.md
+    section_identifier: '[Unreleased]',	# Specify what section to read
+    excluded_markdown_elements: []	# Specify which markdown elements should be excluded
+  )
 
   stamp_changelog(
-    section_identifier: version, # Stamp Unreleased section with newly released build number
-    git_tag: version # Specify reference to git tag associated with this section
+    section_identifier: version # Stamp Unreleased section with newly released build number
   )
 
   github_release = set_github_release(
