@@ -24,7 +24,7 @@ Additionally the following convenience functions are available on the SHDateForm
 
 ## Requirements
 
-The framework is written in Swift 3 and tested with iOS versions 9 and 10.
+The framework is compatible with Xcode 9 and Swift 4. The minimum version is iOS 8.
 
 ## Installation
 
@@ -39,7 +39,6 @@ pod 'SHDateFormatter'
 
 * include more convenience functions to better support relative dates
 * tests for string2date conversion
-* travis CI integration
 * support swift package manager and carthage
 
 ## Author

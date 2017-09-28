@@ -6,7 +6,7 @@
 //  Copyright © 2016 StefanHerold. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Calendars {
     static let gregorian: Calendar = Calendar(identifier: .gregorian)
