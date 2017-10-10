@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		2B684A22542ED4D4BD055E5D /* Pods_SHDateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FCD048E9F516E425348A0 /* Pods_SHDateFormatter.framework */; };
 		ADD60FD84BD9CBCA37992A68 /* Pods_SHDateFormatter_SHDateFormatterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F22964A245E6F2EE1E4560 /* Pods_SHDateFormatter_SHDateFormatterTests.framework */; };
-		B93B00FD1DA80679009773C6 /* SHDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B00FC1DA80679009773C6 /* SHDateFormatter.swift */; };
-		B93B010B1DA84144009773C6 /* SHDateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B010A1DA84144009773C6 /* SHDateFormatter+Extension.swift */; };
-		B99124AF1DA801D300A0B226 /* SHDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B99124A11DA801D300A0B226 /* SHDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94545001F8D6AC1003B982E /* SHDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B94544FE1F8D6AC1003B982E /* SHDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94545051F8D6AF3003B982E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B94545031F8D6AF3003B982E /* README.md */; };
+		B94545061F8D6AF3003B982E /* SHDateFormatter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B94545041F8D6AF3003B982E /* SHDateFormatter.podspec */; };
+		B945450D1F8D6B33003B982E /* SHDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B945450A1F8D6B33003B982E /* SHDateFormatter.swift */; };
+		B945450E1F8D6B33003B982E /* SHDateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B945450B1F8D6B33003B982E /* SHDateFormatter+Extension.swift */; };
+		B945450F1F8D6B33003B982E /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B945450C1F8D6B33003B982E /* Date+Utils.swift */; };
 		B99124BD1DA804C800A0B226 /* DateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99124BC1DA804C800A0B226 /* DateFormatterSpec.swift */; };
 		B99124BF1DA804C800A0B226 /* SHDateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B991249F1DA801D300A0B226 /* SHDateFormatter.framework */; };
-		B9E018921F0E8D6C00E8737A /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E018911F0E8D6C00E8737A /* Date+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,17 +34,17 @@
 		76F22964A245E6F2EE1E4560 /* Pods_SHDateFormatter_SHDateFormatterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHDateFormatter_SHDateFormatterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		785AA8F8B86E398CBA0A9721 /* Pods-SHDateFormatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter/Pods-SHDateFormatter.release.xcconfig"; sourceTree = "<group>"; };
 		8200D82EAC8DEE5D6BF7921E /* Pods-SHDateFormatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter/Pods-SHDateFormatter.debug.xcconfig"; sourceTree = "<group>"; };
-		B93B00FC1DA80679009773C6 /* SHDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHDateFormatter.swift; sourceTree = "<group>"; };
-		B93B010A1DA84144009773C6 /* SHDateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHDateFormatter+Extension.swift"; sourceTree = "<group>"; };
-		B93B01141DA84EB1009773C6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B93B01151DA84EB1009773C6 /* SHDateFormatter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SHDateFormatter.podspec; path = ../SHDateFormatter.podspec; sourceTree = "<group>"; };
+		B94544FE1F8D6AC1003B982E /* SHDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDateFormatter.h; sourceTree = SOURCE_ROOT; };
+		B94544FF1F8D6AC1003B982E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		B94545031F8D6AF3003B982E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B94545041F8D6AF3003B982E /* SHDateFormatter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHDateFormatter.podspec; sourceTree = "<group>"; };
+		B945450A1F8D6B33003B982E /* SHDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHDateFormatter.swift; sourceTree = "<group>"; };
+		B945450B1F8D6B33003B982E /* SHDateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHDateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		B945450C1F8D6B33003B982E /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		B991249F1DA801D300A0B226 /* SHDateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHDateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B99124A11DA801D300A0B226 /* SHDateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDateFormatter.h; sourceTree = "<group>"; };
-		B99124A21DA801D300A0B226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99124BA1DA804C800A0B226 /* SHDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99124BC1DA804C800A0B226 /* DateFormatterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterSpec.swift; sourceTree = "<group>"; };
 		B99124BE1DA804C800A0B226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9E018911F0E8D6C00E8737A /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		BA2E14270787976AFD103738 /* Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter-SHDateFormatterTests/Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE14E16B3F67BF7A3EF43FEF /* Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHDateFormatter-SHDateFormatterTests/Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B94545091F8D6B25003B982E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B945450C1F8D6B33003B982E /* Date+Utils.swift */,
+				B945450A1F8D6B33003B982E /* SHDateFormatter.swift */,
+				B945450B1F8D6B33003B982E /* SHDateFormatter+Extension.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		B98D17551DA7FEA600DC8D91 = {
 			isa = PBXGroup;
 			children = (
@@ -111,16 +123,13 @@
 		B99124A01DA801D300A0B226 /* SHDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
-				B99124A11DA801D300A0B226 /* SHDateFormatter.h */,
-				B93B01141DA84EB1009773C6 /* README.md */,
-				B99124A21DA801D300A0B226 /* Info.plist */,
-				B93B01151DA84EB1009773C6 /* SHDateFormatter.podspec */,
-				B9E018911F0E8D6C00E8737A /* Date+Utils.swift */,
-				B93B00FC1DA80679009773C6 /* SHDateFormatter.swift */,
-				B93B010A1DA84144009773C6 /* SHDateFormatter+Extension.swift */,
+				B94545091F8D6B25003B982E /* Source */,
+				B94545031F8D6AF3003B982E /* README.md */,
+				B94545041F8D6AF3003B982E /* SHDateFormatter.podspec */,
+				B94544FF1F8D6AC1003B982E /* Info.plist */,
+				B94544FE1F8D6AC1003B982E /* SHDateFormatter.h */,
 			);
 			name = SHDateFormatter;
-			path = Source;
 			sourceTree = "<group>";
 		};
 		B99124BB1DA804C800A0B226 /* SHDateFormatterTests */ = {
@@ -140,7 +149,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99124AF1DA801D300A0B226 /* SHDateFormatter.h in Headers */,
+				B94545001F8D6AC1003B982E /* SHDateFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +209,7 @@
 				TargetAttributes = {
 					B991249E1DA801D300A0B226 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					B99124B91DA804C800A0B226 = {
@@ -234,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94545051F8D6AF3003B982E /* README.md in Resources */,
+				B94545061F8D6AF3003B982E /* SHDateFormatter.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +351,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B93B00FD1DA80679009773C6 /* SHDateFormatter.swift in Sources */,
-				B9E018921F0E8D6C00E8737A /* Date+Utils.swift in Sources */,
-				B93B010B1DA84144009773C6 /* SHDateFormatter+Extension.swift in Sources */,
+				B945450D1F8D6B33003B982E /* SHDateFormatter.swift in Sources */,
+				B945450F1F8D6B33003B982E /* Date+Utils.swift in Sources */,
+				B945450E1F8D6B33003B982E /* SHDateFormatter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +495,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CodingCobra.SHDateFormatter;
@@ -513,7 +524,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 5;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CodingCobra.SHDateFormatter;
@@ -531,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE14E16B3F67BF7A3EF43FEF /* Pods-SHDateFormatter-SHDateFormatterTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -545,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA2E14270787976AFD103738 /* Pods-SHDateFormatter-SHDateFormatterTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PCW579R278;
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
