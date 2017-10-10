@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.0.2] - 2017-10-10
+### Changed
+* Refactor project structure
+
 ## [1.0.1] - 2017-10-10
 ### Fixed
 * Fix source-file reference in podspec
