@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Fixed
+* Fix source-file reference in podspec
 
 ## [1.0.0] - 2017-09-28
 ### Changed
