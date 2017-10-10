@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.2] - 2017-10-10
 ### Changed
 * Refactor project structure
 
