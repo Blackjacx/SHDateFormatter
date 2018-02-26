@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.3] - 2018-02-26
 * [#5](https://github.com/Blackjacx/SHDateFormatter/pull/5): Improve Robustness By Using Apple's Default Formatting Styles - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.0.2] - 2017-10-10
