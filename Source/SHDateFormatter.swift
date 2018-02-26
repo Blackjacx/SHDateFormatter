@@ -15,11 +15,11 @@ struct Calendars {
 public enum SHDateFormat: String {
     case shortWeekdayName       = "EEE"
     case longWeekdayName        = "EEEE"
-    case shortTimeNoDate        = "shortTimeNoDate"
+    case shortTimeNoDate
     case noTimeShortDateNoYear  = "d.M."
-    case noTimeShortDate        = "d.M.yy"
-    case noTimeLongDate         = "d. MMMM yyyy"
-    case noTimeRelativeDate     = "noTimeRelativeDate"
+    case noTimeShortDate
+    case noTimeLongDate
+    case noTimeRelativeDate
     /**
      * The only correct date format for client/server communication.
      * http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/
@@ -48,9 +48,7 @@ public struct SHDateFormatter {
         switch format {
         case .shortWeekdayName: fallthrough
         case .longWeekdayName: fallthrough
-        case .noTimeShortDateNoYear: fallthrough
-        case .noTimeShortDate: fallthrough
-        case .noTimeLongDate:
+        case .noTimeShortDateNoYear:
             SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: locale)
 
         case .ISO8601:
@@ -62,11 +60,18 @@ public struct SHDateFormatter {
             SHDateFormatter.formatter.timeStyle = .short
             SHDateFormatter.formatter.dateStyle = .none
 
+        case .noTimeShortDate:
+            SHDateFormatter.formatter.timeStyle = .none
+            SHDateFormatter.formatter.dateStyle = .short
+
+        case .noTimeLongDate:
+            SHDateFormatter.formatter.timeStyle = .none
+            SHDateFormatter.formatter.dateStyle = .long
+
         case .noTimeRelativeDate:
             SHDateFormatter.formatter.doesRelativeDateFormatting = true
             SHDateFormatter.formatter.timeStyle = .none
             SHDateFormatter.formatter.dateStyle = .long
-
         }
     }
 
