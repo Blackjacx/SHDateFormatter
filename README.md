@@ -11,8 +11,8 @@ This framework supports encoding as well as decoding many different date and tim
 * `longWeekdayName`        => Sunday, Monday, Tuesday, ...
 * `shortTimeNoDate`        => 12:00 PM, 1:00 AM
 * `noTimeShortDateNoYear`  => 12/31
-* `noTimeShortDate`        => 12/31/2016
-* `noTimeLongDate`         => December 31, 2016
+* `noTimeShortDate`        => 12/02/2018
+* `noTimeLongDate`         => December 2, 2018
 * `noTimeRelativeDate`     => Today, Tomorrow, ...
 * `ISO8601`                => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 

@@ -84,7 +84,7 @@ class DateFormatterSpec: QuickSpec {
 
                     it("NoTimeShortDate") {
                         let result = SHDateFormatter.shared.stringFromDate(date: testDate, format: .noTimeShortDate, locale: deDE_Locale, timeZone: timeZone)
-                        expect(result) == "1.1.00"
+                        expect(result) == "01.01.00"
                     }
 
                     it("NoTimeLongDate") {
@@ -170,7 +170,7 @@ class DateFormatterSpec: QuickSpec {
 
                     it("NoTimeShortDate") {
                         let result = SHDateFormatter.shared.stringFromDate(date: testDate, format: .noTimeShortDate, locale: frFR_Locale, timeZone: timeZone)
-                        expect(result) == "01/01/00"
+                        expect(result) == "01/01/2000"
                     }
 
                     it("NoTimeLongDate") {
@@ -218,7 +218,7 @@ class DateFormatterSpec: QuickSpec {
 
                     it("NoTimeShortDate") {
                         let result = SHDateFormatter.shared.stringFromDate(date: testDate, format: .noTimeShortDate, locale: deDE_Locale, timeZone: timeZone)
-                        expect(result) == "2.1.00"
+                        expect(result) == "02.01.00"
                     }
 
                     it("NoTimeLongDate") {
@@ -304,7 +304,7 @@ class DateFormatterSpec: QuickSpec {
 
                     it("NoTimeShortDate") {
                         let result = SHDateFormatter.shared.stringFromDate(date: testDate, format: .noTimeShortDate, locale: frFR_Locale, timeZone: timeZone)
-                        expect(result) == "02/01/00"
+                        expect(result) == "02/01/2000"
                     }
 
                     it("NoTimeLongDate") {
