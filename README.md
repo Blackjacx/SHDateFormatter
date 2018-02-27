@@ -41,6 +41,12 @@ pod 'SHDateFormatter'
 * tests for string2date conversion
 * support swift package manager and carthage
 
+## Contribution
+
+- If you found a **bug**, open an **issue**
+- If you have a **feature request**, open an **issue**
+- If you want to **contribute**, submit a **pull request**
+
 ## Author
 
 Stefan Herold, stefan.herold@gmail.com
