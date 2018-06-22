@@ -14,6 +14,6 @@ extension SHDateFormatter {
         guard let date = date else {
             return "--:--"
         }
-        return stringFromDate(date: date, format: .shortTimeNoDate)
+        return string(from: date, format: .shortTimeNoDate)
     }
 }

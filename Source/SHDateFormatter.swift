@@ -19,7 +19,6 @@ public enum SHDateFormat: String {
     case noTimeShortDateNoYear  = "d.M."
     case noTimeShortDate
     case noTimeLongDate
-    case noTimeRelativeDate
     /**
      * The only correct date format for client/server communication.
      * http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/
@@ -37,7 +36,7 @@ public struct SHDateFormatter {
 
     private init() {}
 
-    private func configureForDateFormat(format: SHDateFormat, locale: Locale?, timeZone: TimeZone?) {
+    private func configureForDateFormat(format: SHDateFormat, locale: Locale?, timeZone: TimeZone?, needsRelativeFormatting: Bool) {
         reset()
 
         if locale != nil { SHDateFormatter.formatter.locale = locale }
@@ -67,11 +66,10 @@ public struct SHDateFormatter {
         case .noTimeLongDate:
             SHDateFormatter.formatter.timeStyle = .none
             SHDateFormatter.formatter.dateStyle = .long
+        }
 
-        case .noTimeRelativeDate:
+        if needsRelativeFormatting {
             SHDateFormatter.formatter.doesRelativeDateFormatting = true
-            SHDateFormatter.formatter.timeStyle = .none
-            SHDateFormatter.formatter.dateStyle = .long
         }
     }
 
@@ -89,11 +87,14 @@ public struct SHDateFormatter {
     /**
      * Converts a given Date to String using the provided format and locale. This method runs thread safe.
      *
-     * - parameter date: Date to convert from.
+     * - parameter date: Date string to convert from.
      * - parameter format: The format used for the conversion.
+     * - parameter locale: The locale used for the conversion.
+     * - parameter timeZone: The timeZone used for the conversion.
+     * - parameter needsRelativeFormatting: Use relative formating when set to true.
      * - returns: A String object representing the date.
      */
-    public func stringFromDate(date: Date?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
+    public func string(from date: Date?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil, needsRelatioveFormatting: Bool = false) -> String {
         var dateString: String = ""
 
         guard let date = date else {
@@ -101,7 +102,10 @@ public struct SHDateFormatter {
         }
 
         SHDateFormatter.serialDispatchQueue.sync {
-            configureForDateFormat(format: format, locale: locale, timeZone: timeZone)
+            configureForDateFormat(format: format,
+                                   locale: locale,
+                                   timeZone: timeZone,
+                                   needsRelativeFormatting: needsRelatioveFormatting)
             dateString = SHDateFormatter.formatter.string(from: date)
         }
         return dateString
@@ -110,19 +114,25 @@ public struct SHDateFormatter {
     /**
      * Converts a given date String to Date using the provided format and locale. This method runs thread safe.
      *
-     * - parameter dateString: Date string to convert from.
+     * - parameter string: Date string to convert from.
      * - parameter format: The format used for the conversion.
+     * - parameter locale: The locale used for the conversion.
+     * - parameter timeZone: The timeZone used for the conversion.
+     * - parameter needsRelativeFormatting: Use relative formating when set to true.
      * - returns: A Date object representing the date.
      */
-    public func dateFromString(dateString: String?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil) -> Date? {
+    public func date(from string: String?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil, needsRelativeFormatting: Bool = false) -> Date? {
         var date: Date?
 
-        guard let dateString = dateString else {
+        guard let dateString = string else {
             return date
         }
 
         SHDateFormatter.serialDispatchQueue.sync {
-            configureForDateFormat(format: format, locale: locale, timeZone: timeZone)
+            configureForDateFormat(format: format,
+                                   locale: locale,
+                                   timeZone: timeZone,
+                                   needsRelativeFormatting: needsRelativeFormatting)
             date = SHDateFormatter.formatter.date(from: dateString)
         }
         return date
