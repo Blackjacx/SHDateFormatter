@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.1.0] - 2018-06-22
 * [#7](https://github.com/Blackjacx/SHDateFormatter/pull/7): Allow Relative Formatting For All SHDateFormats - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.0.3] - 2018-02-26
