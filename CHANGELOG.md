@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.1.1] - 2018-06-22
 * [#8](https://github.com/Blackjacx/SHDateFormatter/pull/8): Fix Typo In Relative Date Formatting - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.1.0] - 2018-06-22
