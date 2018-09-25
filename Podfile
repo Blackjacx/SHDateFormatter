@@ -10,5 +10,15 @@ target 'SHDateFormatter' do
     pod 'Quick'
     pod 'Nimble'
   end
+end
 
+post_install do |options|
+
+    options.pods_project.build_configurations.each do |config|
+        if config.name == "Release"
+            config.build_settings['SWIFT_COMPILATION_MODE'] = 'Whole Module'
+            else
+            config.build_settings['SWIFT_COMPILATION_MODE'] = 'Incremental'
+        end
+    end
 end
