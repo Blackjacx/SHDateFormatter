@@ -1,14 +1,14 @@
 <h1 align="center">SHDateFormatter</h1>
 
 <p align="center">
-  <a href="https://www.bitrise.io/app/78d4ba26d291582f"><img alt="Build Status" src="https://www.bitrise.io/app/78d4ba26d291582f/status.svg?token=A3FT8LHA7xARwprjGkbbRg&branch=develop)"/></a>
+  <a href="https://app.bitrise.io/app/79dbf282186be219"><img alt="Build Status" src="https://app.bitrise.io/app/79dbf282186be219/status.svg?token=1Q3QQ9SkwDwNLZ2j1X7n9Q&branch=develop"/></a>
   <a href="http://cocoadocs.org/docsets/SHDateFormatter"><img alt="Version" src="https://cocoapod-badges.herokuapp.com/v/SHDateFormatter/badge.svg"/></a>
   <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg"/>
   <img alt="iOS 8.0+" src="https://img.shields.io/badge/iOS-8.0%2B-blue.svg"/>
   <img alt="Swift 4.2+" src="https://img.shields.io/badge/Swift-4.2%2B-orange.svg"/>
   <!-- <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat"/></a> -->
   <a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true"><img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat"/></a>
-  <a href="https://codecov.io/gh/blackjacx/SHDateFormatter"><img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/master/graph/badge.svg"/></a>
+  <!-- <a href="https://codecov.io/gh/blackjacx/SHDateFormatter"><img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/master/graph/badge.svg"/></a> -->
   <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" /></a>  
   <a href="http://cocoadocs.org/docsets/SHDateFormatter/"><img alt="Downloads" src="https://img.shields.io/cocoapods/dt/SHDateFormatter.svg?maxAge=3600&style=flat" /></a>
   <a href="https://www.paypal.me/STHEROLD"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
