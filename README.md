@@ -14,11 +14,6 @@
   <a href="https://www.paypal.me/STHEROLD"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 </p>
 
-
-[![Version](https://img.shields.io/cocoapods/v/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
-[![License](https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
-[![Platform](https://img.shields.io/cocoapods/p/SHDateFormatter.svg?style=flat)](http://cocoapods.org/pods/SHDateFormatter)
-
 This framework supports encoding as well as decoding many different date and time format. At the moment the follownig are supported (see SHDateFormat): 
 
 * `shortWeekdayName`       => Sun, Mon, Tue, ...
