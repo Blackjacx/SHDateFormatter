@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#9](https://github.com/Blackjacx/SHDateFormatter/pull/9): Swift 4.2 Migration - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.1.1] - 2018-06-22
 * [#8](https://github.com/Blackjacx/SHDateFormatter/pull/8): Fix Typo In Relative Date Formatting - [@blackjacx](https://github.com/blackjacx).
