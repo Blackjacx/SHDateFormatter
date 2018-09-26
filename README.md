@@ -9,7 +9,7 @@
   <img alt="Swift 4.2+" src="https://img.shields.io/badge/Swift-4.2%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
-  <img alt="Github Closed Issues" src="https://img.shields.io/github/issues-closed-raw/blackjacx/SHDateFormatter.svg" />
+  <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
   <!-- <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" /></a> -->
   <a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true"><img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" /></a>
   <!-- <a href="https://codecov.io/gh/blackjacx/SHDateFormatter"><img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/master/graph/badge.svg" /></a> -->
