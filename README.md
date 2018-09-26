@@ -2,14 +2,10 @@
 
 <p align="center">
   <a href="https://app.bitrise.io/app/79dbf282186be219"><img alt="Build Status" src="https://app.bitrise.io/app/79dbf282186be219/status.svg?token=1Q3QQ9SkwDwNLZ2j1X7n9Q&branch=develop" /></a>
-  <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
-  <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
+  <a href="https://cocoapods.org/pods/SHDateFormatter"><img alt="Version" src="https://cocoapod-badges.herokuapp.com/v/SHDateFormatter/badge.svg" /></a>
   <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
-  <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
+  <img alt="iOS 8.0+" src="https://img.shields.io/badge/iOS-8.0%2B-blue.svg"/>
   <img alt="Swift 4.2+" src="https://img.shields.io/badge/Swift-4.2%2B-orange.svg" />
-  <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
-  <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
-  <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
   <!-- <a href="https://github.com/Carthage/Carthage"><img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" /></a> -->
   <a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true"><img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" /></a>
   <!-- <a href="https://codecov.io/gh/blackjacx/SHDateFormatter"><img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/master/graph/badge.svg" /></a> -->
