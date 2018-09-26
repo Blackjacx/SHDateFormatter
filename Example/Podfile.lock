@@ -1,0 +1,27 @@
+PODS:
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - SHDateFormatter (1.1.1)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - SHDateFormatter (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  SHDateFormatter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  SHDateFormatter: cc8a33ad8252911f0e45c03c85dd3bd89b108160
+
+PODFILE CHECKSUM: 54df3dea259be93c736c09609ca6d91888a1f119
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,16 @@
+platform :ios, '9.0'
+use_frameworks!
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target 'SHDateFormatter_Example' do
+  pod 'SHDateFormatter', :path => '../'
+
+  target 'SHDateFormatter_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+  end
+end
