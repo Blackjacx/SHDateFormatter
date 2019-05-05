@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.3.0] - 2019-05-06
+* [#11](https://github.com/Blackjacx/SHDateFormatter/pull/11): Swift 5 Update - [@blackjacx](https://github.com/blackjacx).
+* [#10](https://github.com/Blackjacx/SHDateFormatter/pull/10): Improve product structure - [@blackjacx](https://github.com/blackjacx).
+* Add AUTHORS file - [@blackjacx](https://github.com/blackjacx).
+
 ## [1.1.1] - 2018-06-22
 * [#8](https://github.com/Blackjacx/SHDateFormatter/pull/8): Fix Typo In Relative Date Formatting - [@blackjacx](https://github.com/blackjacx).
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'SHDateFormatter'
-    s.version          = '1.2.0'
+    s.version          = '1.3.0'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.summary          = 'A date formatter supporting encoding as well as decoding of many different date and time formats including the often used ISO8601 standard.'
     s.description      = <<-DESC
@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
     s.author           = { 'Stefan Herold' => 'stefan.herold@gmail.com' }
     s.source           = { :git => 'https://github.com/blackjacx/SHDateFormatter.git', :tag => s.version.to_s }
 
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '9.0'
 
-    s.source_files = 'SHDateFormatter/Classes/**/*'
+    s.source_files = 'source/Classes/**/*'
 
     # s.resource_bundles = {
-    #     'SHDateFormatter' => ['SHDateFormatter/Strings/*.lproj/*.strings']
+    #     'SHDateFormatter' => ['source/Strings/*.lproj/*.strings']
     # }
 
     # s.public_header_files = 'Pod/Classes/**/*.h'

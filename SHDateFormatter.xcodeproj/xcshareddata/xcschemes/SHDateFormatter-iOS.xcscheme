@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SHDateFormatter_Example.app"
-               BlueprintName = "SHDateFormatter_Example"
-               ReferencedContainer = "container:SHDateFormatter.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SHDateFormatter_Tests.xctest"
-               BlueprintName = "SHDateFormatter_Tests"
+               BlueprintIdentifier = "B9C8323D21C84B300008ED90"
+               BuildableName = "SHDateFormatter_iOS.framework"
+               BlueprintName = "SHDateFormatter-iOS"
                ReferencedContainer = "container:SHDateFormatter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SHDateFormatter_Tests.xctest"
-               BlueprintName = "SHDateFormatter_Tests"
+               BuildableName = "SHDateFormatter_iOS_Tests.xctest"
+               BlueprintName = "SHDateFormatter_iOS_Tests"
                ReferencedContainer = "container:SHDateFormatter.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SHDateFormatter_Example.app"
-            BlueprintName = "SHDateFormatter_Example"
+            BlueprintIdentifier = "B9C8323D21C84B300008ED90"
+            BuildableName = "SHDateFormatter_iOS.framework"
+            BlueprintName = "SHDateFormatter-iOS"
             ReferencedContainer = "container:SHDateFormatter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SHDateFormatter_Example.app"
-            BlueprintName = "SHDateFormatter_Example"
+            BlueprintIdentifier = "B9C8323D21C84B300008ED90"
+            BuildableName = "SHDateFormatter_iOS.framework"
+            BlueprintName = "SHDateFormatter-iOS"
             ReferencedContainer = "container:SHDateFormatter.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SHDateFormatter_Example.app"
-            BlueprintName = "SHDateFormatter_Example"
+            BlueprintIdentifier = "B9C8323D21C84B300008ED90"
+            BuildableName = "SHDateFormatter_iOS.framework"
+            BlueprintName = "SHDateFormatter-iOS"
             ReferencedContainer = "container:SHDateFormatter.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
