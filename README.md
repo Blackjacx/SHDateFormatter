@@ -8,7 +8,7 @@
   <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
   <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
   <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
-  <img alt="Swift 4.2+" src="https://img.shields.io/badge/Swift-4.2%2B-orange.svg" />
+  <img alt="Swift 5.0+" src="https://img.shields.io/badge/Swift-5.0%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
@@ -23,9 +23,6 @@
   </a>
   <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop">
     <img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" />
-  </a>  
-  <a href="https://cocoapods.org/pods/SHDateFormatter">
-    <img alt="Downloads" src="https://img.shields.io/cocoapods/dt/SHDateFormatter.svg?maxAge=3600&style=flat" />
   </a>
   <a href="https://www.paypal.me/STHEROLD">
     <img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/>
