@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#11](https://github.com/Blackjacx/SHDateFormatter/pull/11): Swift 5 Update - [@blackjacx](https://github.com/blackjacx).
 * [#10](https://github.com/Blackjacx/SHDateFormatter/pull/10): Improve product structure - [@blackjacx](https://github.com/blackjacx).
 * Add AUTHORS file - [@blackjacx](https://github.com/blackjacx).
 
