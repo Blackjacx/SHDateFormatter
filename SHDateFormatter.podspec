@@ -11,13 +11,13 @@ Pod::Spec.new do |s|
     s.author           = { 'Stefan Herold' => 'stefan.herold@gmail.com' }
     s.source           = { :git => 'https://github.com/blackjacx/SHDateFormatter.git', :tag => s.version.to_s }
 
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '9.0'
 
-    s.source_files = 'SHDateFormatter/Classes/**/*'
+    s.source_files = 'source/Classes/**/*'
 
-    # s.resource_bundles = {
-    #     'SHDateFormatter' => ['SHDateFormatter/Strings/*.lproj/*.strings']
-    # }
+    s.resource_bundles = {
+        'SHDateFormatter' => ['source/Strings/*.lproj/*.strings']
+    }
 
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
