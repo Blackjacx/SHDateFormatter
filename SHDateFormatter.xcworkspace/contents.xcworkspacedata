@@ -5,6 +5,9 @@
       location = "group:SHDateFormatter.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Example/SHDateFormatterExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
