@@ -166,9 +166,9 @@
 			productReference = 607FACE51AFB9204008FA782 /* SHDateFormatter_iOS_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B9C8323D21C84B300008ED90 /* SHDateFormatter */ = {
+		B9C8323D21C84B300008ED90 /* SHDateFormatter-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9C8324321C84B300008ED90 /* Build configuration list for PBXNativeTarget "SHDateFormatter" */;
+			buildConfigurationList = B9C8324321C84B300008ED90 /* Build configuration list for PBXNativeTarget "SHDateFormatter-iOS" */;
 			buildPhases = (
 				B9C8323921C84B300008ED90 /* Headers */,
 				B9C8323A21C84B300008ED90 /* Sources */,
@@ -179,7 +179,7 @@
 			);
 			dependencies = (
 			);
-			name = SHDateFormatter;
+			name = "SHDateFormatter-iOS";
 			productName = SHSearchBar;
 			productReference = B9C8323E21C84B300008ED90 /* SHDateFormatter.framework */;
 			productType = "com.apple.product-type.framework";
@@ -228,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9C8323D21C84B300008ED90 /* SHDateFormatter */,
+				B9C8323D21C84B300008ED90 /* SHDateFormatter-iOS */,
 				607FACE41AFB9204008FA782 /* SHDateFormatter_iOS_Tests */,
 			);
 		};
@@ -473,7 +473,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.SHDateFormatter;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SHDateFormatter;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -508,7 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.SHDateFormatter;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SHDateFormatter;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9C8324321C84B300008ED90 /* Build configuration list for PBXNativeTarget "SHDateFormatter" */ = {
+		B9C8324321C84B300008ED90 /* Build configuration list for PBXNativeTarget "SHDateFormatter-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9C8324421C84B300008ED90 /* Debug */,
