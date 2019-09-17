@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#13](https://github.com/Blackjacx/SHDateFormatter/pull/13): Add SPM Support - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.3.0] - 2019-05-06
 * [#11](https://github.com/Blackjacx/SHDateFormatter/pull/11): Swift 5 Update - [@blackjacx](https://github.com/blackjacx).
