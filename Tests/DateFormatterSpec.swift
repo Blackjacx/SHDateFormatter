@@ -20,7 +20,7 @@ class DateFormatterSpec: QuickSpec {
             let gmtZone = TimeZone(identifier: "Europe/London")!
 
             let deDE_Locale = Locale(identifier: "de_DE")
-            let enEN_Locale = Locale(identifier: "en_EN")
+            let enEN_Locale = Locale(identifier: "en_US")
             let frFR_Locale = Locale(identifier: "fr_FR")
 
             func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
