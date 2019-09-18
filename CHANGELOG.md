@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2019-09-18
+* [#14](https://github.com/Blackjacx/SHDateFormatter/pull/14): Reset Locale to Current - [@blackjacx](https://github.com/blackjacx).
+* [#13](https://github.com/Blackjacx/SHDateFormatter/pull/13): Add SPM Support - [@blackjacx](https://github.com/blackjacx).
+
 ## [1.3.0] - 2019-05-06
 * [#11](https://github.com/Blackjacx/SHDateFormatter/pull/11): Swift 5 Update - [@blackjacx](https://github.com/blackjacx).
 * [#10](https://github.com/Blackjacx/SHDateFormatter/pull/10): Improve product structure - [@blackjacx](https://github.com/blackjacx).
