@@ -1,8 +1,6 @@
 # Changelog
 
 ## [Unreleased]
-
-## [1.5.0] - 2019-09-18
 * [#14](https://github.com/Blackjacx/SHDateFormatter/pull/14): Reset Locale to Current - [@blackjacx](https://github.com/blackjacx).
 * [#13](https://github.com/Blackjacx/SHDateFormatter/pull/13): Add SPM Support - [@blackjacx](https://github.com/blackjacx).
 
