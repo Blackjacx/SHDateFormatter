@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'SHDateFormatter'
-    s.version          = '1.5.0'
+    s.version          = '1.4.0'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.summary          = 'A date formatter supporting encoding as well as decoding of many different date and time formats including the often used ISO8601 standard.'
     s.description      = <<-DESC
