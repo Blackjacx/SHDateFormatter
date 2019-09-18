@@ -79,8 +79,7 @@ public struct SHDateFormatter {
         SHDateFormatter.formatter.dateFormat = nil
         SHDateFormatter.formatter.timeStyle = .none
         SHDateFormatter.formatter.dateStyle = .none
-        // http://www.alexcurylo.com/2011/02/16/tip-nsdateformatter-localization/
-        SHDateFormatter.formatter.locale = Locale(identifier: Locale.preferredLanguages[0])
+        SHDateFormatter.formatter.locale = Locale.current
         SHDateFormatter.formatter.timeZone = TimeZone.current
     }
 
