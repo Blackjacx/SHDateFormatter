@@ -44,6 +44,7 @@ This framework supports encoding as well as decoding many different date and tim
 * `shortWeekdayName`       => Sun, Mon, Tue, ...
 * `longWeekdayName`        => Sunday, Monday, Tuesday, ...
 * `shortTimeNoDate`        => 12:00 PM, 1:00 AM
+* `shortTimeMediumDate`    => Jan 1, 2000 at 12:00 AM
 * `noTimeShortDateNoYear`  => 12/31
 * `noTimeShortDate`        => 12/02/2018
 * `noTimeLongDate`         => December 2, 2018
@@ -58,7 +59,7 @@ Additionally the following convenience functions are available on the SHDateForm
 
 ## Requirements
 
-The framework is compatible with Xcode 9 and Swift 4. The minimum version is iOS 8.
+The framework is compatible with Xcode 11 and Swift 5.1. The minimum version is iOS 9.
 
 ## Installation
 
@@ -69,12 +70,6 @@ it, simply add the following line to your Podfile:
 pod 'SHDateFormatter'
 ```
 
-## Next Steps
-
-* include more convenience functions to better support relative dates
-* tests for string2date conversion
-* support swift package manager and carthage
-
 ## Contribution
 
 - If you found a **bug**, please open an **issue**.
@@ -83,7 +78,7 @@ pod 'SHDateFormatter'
 
 ## Author
 
-[Stefan Herold](mailto:stefan.herold@gmail.com) • [@Blackjacxxx](https://twitter.com/Blackjacxxx)
+[Stefan Herold](mailto:stefan.herold@gmail.com) • 🐦 [@Blackjacxxx](https://twitter.com/Blackjacxxx)
 
 ## License
 
