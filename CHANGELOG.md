@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#19](https://github.com/Blackjacx/SHDateFormatter/pull/19): Add new accessibility date format & Fix Vulnerabilities & 12/24h check - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.4.0] - 2019-09-18
 * [#14](https://github.com/Blackjacx/SHDateFormatter/pull/14): Reset Locale to Current - [@blackjacx](https://github.com/blackjacx).
