@@ -8,6 +8,7 @@ public enum SHDateFormat: String {
     case shortWeekdayName       = "EEE"
     case longWeekdayName        = "EEEE"
     case shortTimeNoDate
+    case shortTimeMediumDate
     case noTimeShortDateNoYear  = "d.M."
     case noTimeShortDate
     case noTimeLongDate
@@ -51,6 +52,10 @@ public struct SHDateFormatter {
         case .shortTimeNoDate:
             SHDateFormatter.formatter.timeStyle = .short
             SHDateFormatter.formatter.dateStyle = .none
+
+        case .shortTimeMediumDate:
+            SHDateFormatter.formatter.timeStyle = .short
+            SHDateFormatter.formatter.dateStyle = .medium
 
         case .noTimeShortDate:
             SHDateFormatter.formatter.timeStyle = .none
