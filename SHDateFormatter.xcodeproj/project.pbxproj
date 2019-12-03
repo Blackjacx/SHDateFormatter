@@ -128,8 +128,8 @@
 		B9C8323821C849990008ED90 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				B9C8325221C84CC90008ED90 /* Info.plist */,
 				B9ACE3A8227F6ED200A2B95E /* Date+Utils.swift */,
+				B9C8325221C84CC90008ED90 /* Info.plist */,
 				B9ACE3A9227F6ED200A2B95E /* SHDateFormatter.swift */,
 				B9ACE3A7227F6ED200A2B95E /* SHDateFormatter+Extension.swift */,
 				B940012623964CD600003150 /* TimeZone+Extensions.swift */,
@@ -200,7 +200,6 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 1020;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 					B9C8323D21C84B300008ED90 = {
 						CreatedOnToolsVersion = 10.1;

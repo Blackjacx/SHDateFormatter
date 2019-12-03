@@ -12,7 +12,7 @@ class DateFormatterTests: QuickSpec {
             let gmtZone = TimeZone(identifier: "Europe/London")!
 
             let deDE_Locale = Locale(identifier: "de_DE")
-            let enEN_Locale = Locale(identifier: "en_US")
+            let enUS_Locale = Locale(identifier: "en_US")
             let frFR_Locale = Locale(identifier: "fr_FR")
 
             func dateFrom(year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int) -> Date {
@@ -44,7 +44,22 @@ class DateFormatterTests: QuickSpec {
                     hour: 12)
                 return comps.date!
             }
-            
+
+            context("12h format") {
+
+                it("uses 12h format for locale en_US") {
+                    expect(SHDateFormatter.is12hFormat(enUS_Locale)) == true
+                }
+
+                it("uses 24h format for locale de_DE") {
+                    expect(SHDateFormatter.is12hFormat(deDE_Locale)) == false
+                }
+
+                it("uses 24h format for locale fr_FR") {
+                    expect(SHDateFormatter.is12hFormat(frFR_Locale)) == false
+                }
+            }
+
             context("String To Date") {
 
                 context("General Tests") {
@@ -108,40 +123,40 @@ class DateFormatterTests: QuickSpec {
                         }
                     }
 
-                    context("\(enEN_Locale.identifier)") {
+                    context("\(enUS_Locale.identifier)") {
 
                         it("ShortWeekdayName") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "Sat"
                         }
 
                         it("LongWeekdayName") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "Saturday"
                         }
 
                         it("ShortTimeNoDate") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "12:00 AM"
                         }
 
                         it("NoTimeShortDateNoYear") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "1/1"
                         }
 
                         it("NoTimeShortDate") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "1/1/00"
                         }
 
                         it("NoTimeLongDate") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "January 1, 2000"
                         }
 
                         it("ISO8601") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "2000-01-01T00:00:00Z"
                         }
                     }
@@ -227,40 +242,40 @@ class DateFormatterTests: QuickSpec {
                         }
                     }
 
-                    context("\(enEN_Locale.identifier)") {
+                    context("\(enUS_Locale.identifier)") {
 
                         it("ShortWeekdayName") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "Sun"
                         }
 
                         it("LongWeekdayName") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "Sunday"
                         }
 
                         it("ShortTimeNoDate") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "12:00 PM"
                         }
 
                         it("NoTimeShortDateNoYear") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "1/2"
                         }
 
                         it("NoTimeShortDate") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "1/2/00"
                         }
 
                         it("NoTimeLongDate") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "January 2, 2000"
                         }
 
                         it("ISO8601") {
-                            let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enEN_Locale, timeZone: gmtZone)
+                            let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enUS_Locale, timeZone: gmtZone)
                             expect(result) == "2000-01-02T12:00:00Z"
                         }
                     }
@@ -348,40 +363,40 @@ class DateFormatterTests: QuickSpec {
                             }
                         }
 
-                        context("\(enEN_Locale.identifier)") {
+                        context("\(enUS_Locale.identifier)") {
 
                             it("ShortWeekdayName") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("LongWeekdayName") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("ShortTimeNoDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "12:00 PM"
                             }
 
                             it("NoTimeShortDateNoYear") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("NoTimeShortDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "Yesterday"
                             }
 
                             it("NoTimeLongDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "Yesterday"
                             }
 
                             it("ISO8601") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
                         }
@@ -467,40 +482,40 @@ class DateFormatterTests: QuickSpec {
                             }
                         }
 
-                        context("\(enEN_Locale.identifier)") {
+                        context("\(enUS_Locale.identifier)") {
 
                             it("ShortWeekdayName") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("LongWeekdayName") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("ShortTimeNoDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "12:00 PM"
                             }
 
                             it("NoTimeShortDateNoYear") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("NoTimeShortDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "Today"
                             }
 
                             it("NoTimeLongDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "Today"
                             }
 
                             it("ISO8601") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
                         }
@@ -586,40 +601,40 @@ class DateFormatterTests: QuickSpec {
                             }
                         }
 
-                        context("\(enEN_Locale.identifier)") {
+                        context("\(enUS_Locale.identifier)") {
 
                             it("ShortWeekdayName") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortWeekdayName, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("LongWeekdayName") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .longWeekdayName, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("ShortTimeNoDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .shortTimeNoDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "12:00 PM"
                             }
 
                             it("NoTimeShortDateNoYear") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDateNoYear, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
 
                             it("NoTimeShortDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeShortDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "Tomorrow"
                             }
 
                             it("NoTimeLongDate") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .noTimeLongDate, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == "Tomorrow"
                             }
 
                             it("ISO8601") {
-                                let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enEN_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
+                                let result = SHDateFormatter.shared.string(from: testDate, format: .ISO8601, locale: enUS_Locale, timeZone: gmtZone, needsRelativeFormatting: true)
                                 expect(result) == ""
                             }
                         }
@@ -663,7 +678,6 @@ class DateFormatterTests: QuickSpec {
                         }
                     }
                 }
-
             }
         }
     }
