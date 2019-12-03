@@ -1,17 +1,9 @@
-//
-//  DateFormatterSpec.swift
-//  Tests
-//
-//  Created by Stefan Herold on 07/10/2016.
-//  Copyright © 2016 StefanHerold. All rights reserved.
-//
-
 import XCTest
 import Quick
 import Nimble
 @testable import SHDateFormatter
 
-class DateFormatterSpec: QuickSpec {
+class DateFormatterTests: QuickSpec {
 
     override func spec() {
 
@@ -52,7 +44,7 @@ class DateFormatterSpec: QuickSpec {
                     hour: 12)
                 return comps.date!
             }
-
+            
             context("String To Date") {
 
                 context("General Tests") {

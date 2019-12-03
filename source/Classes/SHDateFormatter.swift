@@ -53,7 +53,7 @@ public struct SHDateFormatter {
         case .ISO8601:
             SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
             SHDateFormatter.formatter.dateFormat = format.rawValue
-            SHDateFormatter.formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            SHDateFormatter.formatter.timeZone = TimeZone.GMT
 
         case .shortTimeNoDate:
             SHDateFormatter.formatter.timeStyle = .short
