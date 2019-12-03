@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9ACE389227F6D0000A2B95E /* DateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACE387227F6CF900A2B95E /* DateFormatterSpec.swift */; };
+		B9ACE389227F6D0000A2B95E /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACE387227F6CF900A2B95E /* DateFormatterTests.swift */; };
 		B9ACE3AA227F6ED200A2B95E /* SHDateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACE3A7227F6ED200A2B95E /* SHDateFormatter+Extension.swift */; };
 		B9ACE3AB227F6ED200A2B95E /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACE3A8227F6ED200A2B95E /* Date+Utils.swift */; };
 		B9ACE3AC227F6ED200A2B95E /* SHDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACE3A9227F6ED200A2B95E /* SHDateFormatter.swift */; };
+		B9ADB39A23968C88005D2820 /* TimeZone+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ADB39923968C88005D2820 /* TimeZone+Extensions.swift */; };
 		C5066CC6D37297BDA24BB377 /* Pods_TestPods_SHDateFormatter_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1527912D7ED152D3A27B543 /* Pods_TestPods_SHDateFormatter_iOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		607FACE51AFB9204008FA782 /* SHDateFormatter_iOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHDateFormatter_iOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922B1BD143DA18A28738AA1C /* Pods-TestPods-SHDateFormatter_iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPods-SHDateFormatter_iOS_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPods-SHDateFormatter_iOS_Tests/Pods-TestPods-SHDateFormatter_iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B9ACE387227F6CF900A2B95E /* DateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterSpec.swift; sourceTree = "<group>"; };
+		B9ACE387227F6CF900A2B95E /* DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
 		B9ACE38A227F6D3200A2B95E /* SHDateFormatter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHDateFormatter.podspec; sourceTree = "<group>"; };
 		B9ACE3A7227F6ED200A2B95E /* SHDateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SHDateFormatter+Extension.swift"; path = "Classes/SHDateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		B9ACE3A8227F6ED200A2B95E /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Utils.swift"; path = "Classes/Date+Utils.swift"; sourceTree = "<group>"; };
 		B9ACE3A9227F6ED200A2B95E /* SHDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SHDateFormatter.swift; path = Classes/SHDateFormatter.swift; sourceTree = "<group>"; };
+		B9ADB39923968C88005D2820 /* TimeZone+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeZone+Extensions.swift"; path = "Classes/TimeZone+Extensions.swift"; sourceTree = "<group>"; };
 		B9C8323121C8497F0008ED90 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		B9C8323221C8497F0008ED90 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
 		B9C8323321C8497F0008ED90 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B9ACE387227F6CF900A2B95E /* DateFormatterSpec.swift */,
+				B9ACE387227F6CF900A2B95E /* DateFormatterTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -126,10 +128,11 @@
 		B9C8323821C849990008ED90 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				B9C8325221C84CC90008ED90 /* Info.plist */,
 				B9ACE3A8227F6ED200A2B95E /* Date+Utils.swift */,
 				B9ACE3A9227F6ED200A2B95E /* SHDateFormatter.swift */,
 				B9ACE3A7227F6ED200A2B95E /* SHDateFormatter+Extension.swift */,
-				B9C8325221C84CC90008ED90 /* Info.plist */,
+				B9ADB39923968C88005D2820 /* TimeZone+Extensions.swift */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -197,7 +200,6 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 1020;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 					B9C8323D21C84B300008ED90 = {
 						CreatedOnToolsVersion = 10.1;
@@ -297,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9ACE389227F6D0000A2B95E /* DateFormatterSpec.swift in Sources */,
+				B9ACE389227F6D0000A2B95E /* DateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +309,7 @@
 			files = (
 				B9ACE3AC227F6ED200A2B95E /* SHDateFormatter.swift in Sources */,
 				B9ACE3AB227F6ED200A2B95E /* Date+Utils.swift in Sources */,
+				B9ADB39A23968C88005D2820 /* TimeZone+Extensions.swift in Sources */,
 				B9ACE3AA227F6ED200A2B95E /* SHDateFormatter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,12 +462,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCW579R278;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 9;
+				DYLIB_CURRENT_VERSION = 10;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = source/Info.plist;
@@ -496,11 +499,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCW579R278;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 9;
+				DYLIB_CURRENT_VERSION = 10;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = source/Info.plist;

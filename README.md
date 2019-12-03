@@ -4,26 +4,36 @@
   <a href="https://app.bitrise.io/app/79dbf282186be219">
     <img alt="Build Status" src="https://app.bitrise.io/app/79dbf282186be219/status.svg?token=1Q3QQ9SkwDwNLZ2j1X7n9Q&branch=develop" />
   </a>
+  
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
   <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
-  <img alt="Xcode 10.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
+  <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
   <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
-  <img alt="Swift 5.0+" src="https://img.shields.io/badge/Swift-5.0%2B-orange.svg" />
+  <img alt="Swift 5.1+" src="https://img.shields.io/badge/Swift-5.0%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
+  
   <!-- <a href="https://github.com/Carthage/Carthage">
     <img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" />
   </a> -->
+  
   <a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true">
     <img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" />
   </a>
+  
   <a href="https://codecov.io/gh/blackjacx/SHDateFormatter">
     <img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/develop/graph/badge.svg" />
   </a>
+  
   <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop">
     <img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" />
   </a>
+  
+  <a href="https://twitter.com/blackjacxxx">
+    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx"/>
+  </a>
+  
   <a href="https://www.paypal.me/STHEROLD">
     <img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/>
   </a>
@@ -34,6 +44,7 @@ This framework supports encoding as well as decoding many different date and tim
 * `shortWeekdayName`       => Sun, Mon, Tue, ...
 * `longWeekdayName`        => Sunday, Monday, Tuesday, ...
 * `shortTimeNoDate`        => 12:00 PM, 1:00 AM
+* `shortTimeMediumDate`    => Jan 1, 2000 at 12:00 AM
 * `noTimeShortDateNoYear`  => 12/31
 * `noTimeShortDate`        => 12/02/2018
 * `noTimeLongDate`         => December 2, 2018
@@ -48,7 +59,7 @@ Additionally the following convenience functions are available on the SHDateForm
 
 ## Requirements
 
-The framework is compatible with Xcode 9 and Swift 4. The minimum version is iOS 8.
+The framework is compatible with Xcode 11 and Swift 5.1. The minimum version is iOS 9.
 
 ## Installation
 
@@ -59,12 +70,6 @@ it, simply add the following line to your Podfile:
 pod 'SHDateFormatter'
 ```
 
-## Next Steps
-
-* include more convenience functions to better support relative dates
-* tests for string2date conversion
-* support swift package manager and carthage
-
 ## Contribution
 
 - If you found a **bug**, please open an **issue**.
@@ -73,7 +78,7 @@ pod 'SHDateFormatter'
 
 ## Author
 
-[Stefan Herold](mailto:stefan.herold@gmail.com) • [@Blackjacxxx](https://twitter.com/Blackjacxxx)
+[Stefan Herold](mailto:stefan.herold@gmail.com) • 🐦 [@Blackjacxxx](https://twitter.com/Blackjacxxx)
 
 ## License
 

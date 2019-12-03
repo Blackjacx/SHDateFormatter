@@ -1,23 +1,17 @@
-//
-//  ViewController.swift
-//  SHDateFormatter
-//
-//  Created by Stefan Herold on 10/07/2016.
-//  Copyright (c) 2016 Stefan Herold. All rights reserved.
-//
-
 import UIKit
+import SHDateFormatter
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        let deDE_Locale = Locale(identifier: "de_DE")
+        let enUS_Locale = Locale(identifier: "en_US")
+        let frFR_Locale = Locale(identifier: "fr_FR")
 
+        print(SHDateFormatter.is12hFormat(deDE_Locale))
+        print(SHDateFormatter.is12hFormat(enUS_Locale))
+        print(SHDateFormatter.is12hFormat(frFR_Locale))
+    }
 }

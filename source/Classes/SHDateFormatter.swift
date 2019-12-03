@@ -1,11 +1,3 @@
-//
-//  SHDateFormatter.swift
-//  SHDateFormatter
-//
-//  Created by Stefan Herold on 07/10/2016.
-//  Copyright © 2016 StefanHerold. All rights reserved.
-//
-
 import Foundation
 
 struct Calendars {
@@ -16,6 +8,7 @@ public enum SHDateFormat: String {
     case shortWeekdayName       = "EEE"
     case longWeekdayName        = "EEEE"
     case shortTimeNoDate
+    case shortTimeMediumDate
     case noTimeShortDateNoYear  = "d.M."
     case noTimeShortDate
     case noTimeLongDate
@@ -30,6 +23,12 @@ public enum SHDateFormat: String {
 public struct SHDateFormatter {
 
     public static let shared = SHDateFormatter()
+
+    public static func is12hFormat(_ locale: Locale = Locale.current) -> Bool {
+
+        let format = DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: locale)
+        return format?.contains("a") == true
+    }
 
     static let formatter = DateFormatter()
     static let serialDispatchQueue = DispatchQueue(label: "com.dateFormatter.globalSerialDispatchQueue")
@@ -50,14 +49,13 @@ public struct SHDateFormatter {
         case .noTimeShortDateNoYear:
             SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: locale)
 
-        case .ISO8601:
-            SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
-            SHDateFormatter.formatter.dateFormat = format.rawValue
-            SHDateFormatter.formatter.timeZone = TimeZone(secondsFromGMT: 0)
-
         case .shortTimeNoDate:
             SHDateFormatter.formatter.timeStyle = .short
             SHDateFormatter.formatter.dateStyle = .none
+
+        case .shortTimeMediumDate:
+            SHDateFormatter.formatter.timeStyle = .short
+            SHDateFormatter.formatter.dateStyle = .medium
 
         case .noTimeShortDate:
             SHDateFormatter.formatter.timeStyle = .none
@@ -66,6 +64,11 @@ public struct SHDateFormatter {
         case .noTimeLongDate:
             SHDateFormatter.formatter.timeStyle = .none
             SHDateFormatter.formatter.dateStyle = .long
+
+        case .ISO8601:
+            SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
+            SHDateFormatter.formatter.dateFormat = format.rawValue
+            SHDateFormatter.formatter.timeZone = TimeZone.GMT
         }
 
         if needsRelativeFormatting {
