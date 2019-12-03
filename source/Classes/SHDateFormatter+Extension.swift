@@ -11,9 +11,6 @@ import Foundation
 extension SHDateFormatter {
     
     public func localizedTimeStringFromDate(date: Date?) -> String {
-        guard let date = date else {
-            return "--:--"
-        }
-        return string(from: date, format: .shortTimeNoDate)
+        date.map { string(from: $0, format: .shortTimeNoDate) } ?? "--:--"
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B940013623967F3000003150 /* SHDateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B940013523967F3000003150 /* SHDateFormatter.framework */; };
+		B940013723967F3000003150 /* SHDateFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B940013523967F3000003150 /* SHDateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9C8326121C84F3D0008ED90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8326021C84F3D0008ED90 /* AppDelegate.swift */; };
 		B9C8326321C84F3D0008ED90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8326221C84F3D0008ED90 /* ViewController.swift */; };
 		B9C8326621C84F3D0008ED90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C8326421C84F3D0008ED90 /* Main.storyboard */; };
@@ -14,7 +16,22 @@
 		B9C832A321C854A20008ED90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C832A221C854A20008ED90 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B940013823967F3000003150 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B940013723967F3000003150 /* SHDateFormatter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B940013523967F3000003150 /* SHDateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SHDateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C8325D21C84F3D0008ED90 /* SHDateFormatterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHDateFormatterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C8326021C84F3D0008ED90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C8326221C84F3D0008ED90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +46,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B940013623967F3000003150 /* SHDateFormatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B940013423967F3000003150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B940013523967F3000003150 /* SHDateFormatter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9C8325421C84F3D0008ED90 = {
 			isa = PBXGroup;
 			children = (
 				B9C8325F21C84F3D0008ED90 /* SHDateFormatterExample */,
 				B9C8325E21C84F3D0008ED90 /* Products */,
+				B940013423967F3000003150 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +102,7 @@
 				B9C8325921C84F3D0008ED90 /* Sources */,
 				B9C8325A21C84F3D0008ED90 /* Frameworks */,
 				B9C8325B21C84F3D0008ED90 /* Resources */,
+				B940013823967F3000003150 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
