@@ -82,4 +82,4 @@ pod 'SHDateFormatter'
 
 ## License
 
-SHDateFormatter is available under the MIT license. See the LICENSE file for more info.
+Source is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
