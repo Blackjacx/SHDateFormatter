@@ -1,8 +1,8 @@
 <h1 align="center">SHDateFormatter</h1>
 
 <p align="center">
-  <a href="https://app.bitrise.io/app/79dbf282186be219">
-    <img alt="Build Status" src="https://app.bitrise.io/app/79dbf282186be219/status.svg?token=1Q3QQ9SkwDwNLZ2j1X7n9Q&branch=develop" />
+  <a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI">
+    <img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" />
   </a>
   
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
@@ -59,7 +59,7 @@ Additionally the following convenience functions are available on the SHDateForm
 
 ## Requirements
 
-The framework is compatible with Xcode 11 and Swift 5.1. The minimum version is iOS 9.
+The framework is compatible with Xcode 11 and Swift 5.1+. The minimum version is iOS 9.
 
 ## Installation
 
