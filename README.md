@@ -22,10 +22,6 @@
     <img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" />
   </a>
   
-  <a href="https://codecov.io/gh/blackjacx/SHDateFormatter">
-    <img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/develop/graph/badge.svg" />
-  </a>
-  
   <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop">
     <img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" />
   </a>
