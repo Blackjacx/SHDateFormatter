@@ -3,24 +3,22 @@
 //  SHDateFormatter
 //
 //  Created by Stefan Herold on 06.07.17.
-//  Copyright © 2017 StefanHerold. All rights reserved.
+//  Copyright © 2020 Stefan Herold. All rights reserved.
 //
 
 import Foundation
 
-struct DateConstants {
+enum DateConstants {
     static let dayInSeconds = 86400.0
 }
 
-extension Date {
+public extension Date {
 
-    public func minus24Hours() -> Date {
-
-        return addingTimeInterval(-DateConstants.dayInSeconds)
+    func minus24Hours() -> Date {
+        addingTimeInterval(-DateConstants.dayInSeconds)
     }
 
-    public func plus24Hours() -> Date {
-
-        return addingTimeInterval(DateConstants.dayInSeconds)
+    func plus24Hours() -> Date {
+        addingTimeInterval(DateConstants.dayInSeconds)
     }
 }

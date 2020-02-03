@@ -1,6 +1,6 @@
 import Foundation
 
-struct Calendars {
+enum Calendars {
     static let gregorian: Calendar = Calendar(identifier: .gregorian)
 }
 
@@ -44,9 +44,7 @@ public struct SHDateFormatter {
         let locale = SHDateFormatter.formatter.locale
 
         switch format {
-        case .shortWeekdayName: fallthrough
-        case .longWeekdayName: fallthrough
-        case .noTimeShortDateNoYear:
+        case .shortWeekdayName, .longWeekdayName, .noTimeShortDateNoYear:
             SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: locale)
 
         case .shortTimeNoDate:
