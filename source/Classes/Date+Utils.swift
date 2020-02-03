@@ -13,7 +13,6 @@ enum DateConstants {
 }
 
 public extension Date {
-
     func minus24Hours() -> Date {
         addingTimeInterval(-DateConstants.dayInSeconds)
     }

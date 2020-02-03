@@ -1,4 +1,3 @@
-
 //
 //  AppDelegate.swift
 //  SHDateFormatter
@@ -14,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     private func application(application: UIApplication,
                              didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         true
@@ -26,4 +24,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {}
     func applicationWillTerminate(_ application: UIApplication) {}
 }
-

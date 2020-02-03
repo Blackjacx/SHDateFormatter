@@ -94,7 +94,11 @@ public struct SHDateFormatter {
      * - parameter needsRelativeFormatting: Use relative formating when set to true.
      * - returns: A String object representing the date.
      */
-    public func string(from date: Date?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil, needsRelativeFormatting: Bool = false) -> String {
+    public func string(from date: Date?,
+                       format: SHDateFormat,
+                       locale: Locale? = nil,
+                       timeZone: TimeZone? = nil,
+                       needsRelativeFormatting: Bool = false) -> String {
         var dateString: String = ""
 
         guard let date = date else {
@@ -121,7 +125,11 @@ public struct SHDateFormatter {
      * - parameter needsRelativeFormatting: Use relative formating when set to true.
      * - returns: A Date object representing the date.
      */
-    public func date(from string: String?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil, needsRelativeFormatting: Bool = false) -> Date? {
+    public func date(from string: String?,
+                     format: SHDateFormat,
+                     locale: Locale? = nil,
+                     timeZone: TimeZone? = nil,
+                     needsRelativeFormatting: Bool = false) -> Date? {
         var date: Date?
 
         guard let dateString = string else {
