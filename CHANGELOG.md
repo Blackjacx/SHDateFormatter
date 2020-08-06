@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#21](https://github.com/Blackjacx/SHDateFormatter/pull/21): Add month formatting - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.4.3] - 2019-12-03
 * [#19](https://github.com/Blackjacx/SHDateFormatter/pull/19): Add new accessibility date format & Fix Vulnerabilities & 12/24h check - [@blackjacx](https://github.com/blackjacx).
