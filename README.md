@@ -9,7 +9,7 @@
   <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
   <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
   <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
-  <img alt="Swift 5.1+" src="https://img.shields.io/badge/Swift-5.1%2B-orange.svg" />
+  <img alt="Swift 5.2+" src="https://img.shields.io/badge/Swift-5.2%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
@@ -39,6 +39,8 @@ This framework supports encoding as well as decoding many different date and tim
 
 * `shortWeekdayName`       => Sun, Mon, Tue, ...
 * `longWeekdayName`        => Sunday, Monday, Tuesday, ...
+* `shortMonthName`         => Jan, Feb, ...
+* `longMonthName`          => January, February, ...
 * `shortTimeNoDate`        => 12:00 PM, 1:00 AM
 * `shortTimeMediumDate`    => Jan 1, 2000 at 12:00 AM
 * `noTimeShortDateNoYear`  => 12/31
@@ -52,10 +54,6 @@ The `ISO8601` format implements the standard for working with dates and times be
 Additionally the following convenience functions are available on the SHDateFormatter sharedInstance which will return default values if the input date is nil. They allow to easily deal with optionals and can provide additional functionality like giving you a relative date instead of e.g. "yyyy/MM/dd":
 * `localizedTimeStringFromDate(_:)` - will return `--:--` per default
 * ... to be continued ...
-
-## Requirements
-
-The framework is compatible with Xcode 11 and Swift 5.1+. The minimum version is iOS 9.
 
 ## Installation
 
