@@ -7,6 +7,8 @@ enum Calendars {
 public enum SHDateFormat: String {
     case shortWeekdayName       = "EEE"
     case longWeekdayName        = "EEEE"
+    case shortMonthName         = "MMM"
+    case longMonthName          = "MMMM"
     case shortTimeNoDate
     case shortTimeMediumDate
     case noTimeShortDateNoYear  = "d.M."
@@ -44,7 +46,7 @@ public struct SHDateFormatter {
         let locale = SHDateFormatter.formatter.locale
 
         switch format {
-        case .shortWeekdayName, .longWeekdayName, .noTimeShortDateNoYear:
+        case .shortWeekdayName, .longWeekdayName, .shortMonthName, .longMonthName, .noTimeShortDateNoYear:
             SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: locale)
 
         case .shortTimeNoDate:

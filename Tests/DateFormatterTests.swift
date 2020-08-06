@@ -115,6 +115,22 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "Samstag"
                         }
 
+                        it("ShortMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .shortMonthName,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "Jan"
+                        }
+
+                        it("LongMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .longMonthName,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "Januar"
+                        }
+
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .shortTimeNoDate,
@@ -182,6 +198,22 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "Saturday"
                         }
 
+                        it("ShortMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .shortMonthName,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "Jan"
+                        }
+
+                        it("LongMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .longMonthName,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "January"
+                        }
+
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .shortTimeNoDate,
@@ -247,6 +279,22 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: frFRLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "samedi"
+                        }
+
+                        it("ShortMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .shortMonthName,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "janv."
+                        }
+
+                        it("LongMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .longMonthName,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "janvier"
                         }
 
                         it("ShortTimeNoDate") {
@@ -329,6 +377,22 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "Sonntag"
                         }
 
+                        it("ShortMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .shortMonthName,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "Jan"
+                        }
+
+                        it("LongMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .longMonthName,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "Januar"
+                        }
+
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .shortTimeNoDate,
@@ -396,6 +460,22 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "Sunday"
                         }
 
+                        it("ShortMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .shortMonthName,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "Jan"
+                        }
+
+                        it("LongMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .longMonthName,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "January"
+                        }
+
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .shortTimeNoDate,
@@ -461,6 +541,22 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: frFRLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "dimanche"
+                        }
+
+                        it("ShortMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .shortMonthName,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "janv."
+                        }
+
+                        it("LongMonthName") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .longMonthName,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "janvier"
                         }
 
                         it("ShortTimeNoDate") {
