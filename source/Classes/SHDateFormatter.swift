@@ -1,12 +1,16 @@
 import Foundation
 
-struct Calendars {
+enum Calendars {
     static let gregorian: Calendar = Calendar(identifier: .gregorian)
 }
 
 public enum SHDateFormat: String {
-    case shortWeekdayName       = "EEE"
-    case longWeekdayName        = "EEEE"
+    case shortWeekday           = "EEE"
+    case longWeekday            = "EEEE"
+    case shortMonth             = "MMM"
+    case longMonth              = "MMMM"
+    case longYear               = "yyyy"
+    case shortYear              = "yy"
     case shortTimeNoDate
     case shortTimeMediumDate
     case noTimeShortDateNoYear  = "d.M."
@@ -44,10 +48,10 @@ public struct SHDateFormatter {
         let locale = SHDateFormatter.formatter.locale
 
         switch format {
-        case .shortWeekdayName: fallthrough
-        case .longWeekdayName: fallthrough
-        case .noTimeShortDateNoYear:
-            SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: locale)
+        case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .longYear, .shortYear, .noTimeShortDateNoYear:
+            SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue,
+                                                                            options: 0,
+                                                                            locale: locale)
 
         case .shortTimeNoDate:
             SHDateFormatter.formatter.timeStyle = .short
@@ -96,7 +100,11 @@ public struct SHDateFormatter {
      * - parameter needsRelativeFormatting: Use relative formating when set to true.
      * - returns: A String object representing the date.
      */
-    public func string(from date: Date?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil, needsRelativeFormatting: Bool = false) -> String {
+    public func string(from date: Date?,
+                       format: SHDateFormat,
+                       locale: Locale? = nil,
+                       timeZone: TimeZone? = nil,
+                       needsRelativeFormatting: Bool = false) -> String {
         var dateString: String = ""
 
         guard let date = date else {
@@ -123,7 +131,11 @@ public struct SHDateFormatter {
      * - parameter needsRelativeFormatting: Use relative formating when set to true.
      * - returns: A Date object representing the date.
      */
-    public func date(from string: String?, format: SHDateFormat, locale: Locale? = nil, timeZone: TimeZone? = nil, needsRelativeFormatting: Bool = false) -> Date? {
+    public func date(from string: String?,
+                     format: SHDateFormat,
+                     locale: Locale? = nil,
+                     timeZone: TimeZone? = nil,
+                     needsRelativeFormatting: Bool = false) -> Date? {
         var date: Date?
 
         guard let dateString = string else {

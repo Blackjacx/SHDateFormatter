@@ -1,15 +1,15 @@
 <h1 align="center">SHDateFormatter</h1>
 
 <p align="center">
-  <a href="https://app.bitrise.io/app/79dbf282186be219">
-    <img alt="Build Status" src="https://app.bitrise.io/app/79dbf282186be219/status.svg?token=1Q3QQ9SkwDwNLZ2j1X7n9Q&branch=develop" />
+  <a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI">
+    <img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" />
   </a>
   
   <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
   <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
-  <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-10.0%2B-blue.svg" />
+  <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
   <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
-  <img alt="Swift 5.1+" src="https://img.shields.io/badge/Swift-5.0%2B-orange.svg" />
+  <img alt="Swift 5.2+" src="https://img.shields.io/badge/Swift-5.2%2B-orange.svg" />
   <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
   <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
@@ -20,10 +20,6 @@
   
   <a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true">
     <img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" />
-  </a>
-  
-  <a href="https://codecov.io/gh/blackjacx/SHDateFormatter">
-    <img alt="Codecov" src="https://codecov.io/gh/blackjacx/SHDateFormatter/branch/develop/graph/badge.svg" />
   </a>
   
   <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop">
@@ -41,8 +37,10 @@
 
 This framework supports encoding as well as decoding many different date and time format. At the moment the follownig are supported (see SHDateFormat): 
 
-* `shortWeekdayName`       => Sun, Mon, Tue, ...
-* `longWeekdayName`        => Sunday, Monday, Tuesday, ...
+* `shortWeekday`       => Sun, Mon, Tue, ...
+* `longWeekday`        => Sunday, Monday, Tuesday, ...
+* `shortMonth`         => Jan, Feb, ...
+* `longMonth`          => January, February, ...
 * `shortTimeNoDate`        => 12:00 PM, 1:00 AM
 * `shortTimeMediumDate`    => Jan 1, 2000 at 12:00 AM
 * `noTimeShortDateNoYear`  => 12/31
@@ -56,10 +54,6 @@ The `ISO8601` format implements the standard for working with dates and times be
 Additionally the following convenience functions are available on the SHDateFormatter sharedInstance which will return default values if the input date is nil. They allow to easily deal with optionals and can provide additional functionality like giving you a relative date instead of e.g. "yyyy/MM/dd":
 * `localizedTimeStringFromDate(_:)` - will return `--:--` per default
 * ... to be continued ...
-
-## Requirements
-
-The framework is compatible with Xcode 11 and Swift 5.1. The minimum version is iOS 9.
 
 ## Installation
 
@@ -82,4 +76,4 @@ pod 'SHDateFormatter'
 
 ## License
 
-SHDateFormatter is available under the MIT license. See the LICENSE file for more info.
+Source is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
