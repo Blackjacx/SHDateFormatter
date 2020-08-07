@@ -25,14 +25,11 @@
 * [#5](https://github.com/Blackjacx/SHDateFormatter/pull/5): Improve Robustness By Using Apple's Default Formatting Styles - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.0.2] - 2017-10-10
-### Changed
-* Refactor project structure
+* Refactor project structure - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.0.1] - 2017-10-10
-### Fixed
-* Fix source-file reference in podspec
+* Fix source-file reference in podspec - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.0.0] - 2017-09-28
-### Changed
 * [#4](https://github.com/Blackjacx/SHDateFormatter/pull/4): Conversion to Swift 4 - [@blackjacx](https://github.com/blackjacx).
-* opts in for new build system - [@blackjacx](https://github.com/blackjacx).
+* Opts in for new build system - [@blackjacx](https://github.com/blackjacx).
