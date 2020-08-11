@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.6.0] - 2020-08-11
+*  Add month year combined formatting - [@blackjacx](https://github.com/blackjacx).
+
 ## [1.5.0] - 2020-08-07
 * [#21](https://github.com/Blackjacx/SHDateFormatter/pull/21): Add month/year formatting - [@blackjacx](https://github.com/blackjacx).
 
