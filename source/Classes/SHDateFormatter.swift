@@ -9,8 +9,10 @@ public enum SHDateFormat: String {
     case longWeekday            = "EEEE"
     case shortMonth             = "MMM"
     case longMonth              = "MMMM"
-    case longYear               = "yyyy"
     case shortYear              = "yy"
+    case longYear               = "yyyy"
+    case shortYearMonth         = "MMM yy"
+    case longYearMonth          = "MMMM yyyy"
     case shortTimeNoDate
     case shortTimeMediumDate
     case noTimeShortDateNoYear  = "d.M."
@@ -48,7 +50,8 @@ public struct SHDateFormatter {
         let locale = SHDateFormatter.formatter.locale
 
         switch format {
-        case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .longYear, .shortYear, .noTimeShortDateNoYear:
+        case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .longYear, .shortYear, .noTimeShortDateNoYear,
+             .shortYearMonth, .longYearMonth:
             SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue,
                                                                             options: 0,
                                                                             locale: locale)
