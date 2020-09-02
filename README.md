@@ -1,6 +1,10 @@
 <h1 align="center">SHDateFormatter</h1>
 
 <p align="center">
+  <a href="https://twitter.com/blackjacxxx">
+    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx"/>
+  </a>
+
   <a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI">
     <img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" />
   </a>
@@ -24,10 +28,6 @@
   
   <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop">
     <img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" />
-  </a>
-  
-  <a href="https://twitter.com/blackjacxxx">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx"/>
   </a>
   
   <a href="https://www.paypal.me/STHEROLD">
