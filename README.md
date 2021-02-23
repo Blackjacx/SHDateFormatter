@@ -1,39 +1,22 @@
-<h1 align="center">SHDateFormatter</h1>
+<!-- <p align="center">
+<img src="./icon.png" alt="Source" height="128" width="128">
+</p> -->
 
-<p align="center">
-  <a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI">
-    <img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" />
-  </a>
-  
-  <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
-  <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
-  <img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
-  <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
-  <img alt="Swift 5.2+" src="https://img.shields.io/badge/Swift-5.2%2B-orange.svg" />
-  <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
-  <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
-  <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
-  
-  <!-- <a href="https://github.com/Carthage/Carthage">
-    <img alt="Carthage compatible" src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" />
-  </a> -->
-  
-  <a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true">
-    <img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" />
-  </a>
-  
-  <a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop">
-    <img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" />
-  </a>
-  
-  <a href="https://twitter.com/blackjacxxx">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx"/>
-  </a>
-  
-  <a href="https://www.paypal.me/STHEROLD">
-    <img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/>
-  </a>
-</p>
+# SHDateFormatter
+
+[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacx)
+<a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" /></a>
+<img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
+<img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
+<img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
+<img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
+<img alt="Swift 5.2+" src="https://img.shields.io/badge/Swift-5.2%2B-orange.svg" />
+<img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
+<img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
+<img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
+<a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true"><img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" /></a>
+<a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" /></a>
+<a href="https://www.paypal.me/STHEROLD"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
 
 This framework supports encoding as well as decoding many different date and time format. At the moment the follownig are supported (see SHDateFormat): 
 
