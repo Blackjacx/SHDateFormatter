@@ -5,17 +5,17 @@ enum Calendars {
 }
 
 public enum SHDateFormat: String {
-    case shortWeekday           = "EEE"
-    case longWeekday            = "EEEE"
-    case shortMonth             = "MMM"
-    case longMonth              = "MMMM"
-    case shortYear              = "yy"
-    case longYear               = "yyyy"
-    case shortYearMonth         = "MMM yy"
-    case longYearMonth          = "MMMM yyyy"
+    case shortWeekday               = "EEE"
+    case longWeekday                = "EEEE"
+    case shortMonth                 = "MMM"
+    case longMonth                  = "MMMM"
+    case shortYear                  = "yy"
+    case longYear                   = "yyyy"
+    case shortYearMonth             = "MMM yy"
+    case longYearMonth              = "MMMM yyyy"
     case shortTimeNoDate
     case shortTimeMediumDate
-    case noTimeShortDateNoYear  = "d.M."
+    case noTimeShortDateNoYear      = "d.M."
     case noTimeShortDate
     case noTimeLongDate
     /**
@@ -23,7 +23,7 @@ public enum SHDateFormat: String {
      * http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/
      * https://developer.apple.com/library/ios/qa/qa1480/_index.html
      */
-    case ISO8601                = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+    case ISO8601                    = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 }
 
 public struct SHDateFormatter {
