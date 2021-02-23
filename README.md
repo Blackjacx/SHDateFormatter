@@ -8,9 +8,9 @@
 <a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" /></a>
 <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
 <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
-<img alt="Xcode 11.0+" src="https://img.shields.io/badge/Xcode-11.0%2B-blue.svg" />
+<img alt="Xcode 12.0+" src="https://img.shields.io/badge/Xcode-12.0%2B-blue.svg" />
 <img alt="iOS 9.0+" src="https://img.shields.io/badge/iOS-9.0%2B-blue.svg" />
-<img alt="Swift 5.2+" src="https://img.shields.io/badge/Swift-5.2%2B-orange.svg" />
+<img alt="Swift 5.3+" src="https://img.shields.io/badge/Swift-5.3%2B-orange.svg" />
 <img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
 <img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
 <img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
