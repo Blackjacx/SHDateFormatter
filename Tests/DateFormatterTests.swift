@@ -187,6 +187,14 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "1. Januar 2000"
                         }
 
+                        it("NoTimeIso8601Date") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noTimeIso8601Date,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "2000-01-01"
+                        }
+
                         it("ISO8601") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .ISO8601,
@@ -286,6 +294,14 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "January 1, 2000"
                         }
 
+                        it("NoTimeIso8601Date") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noTimeIso8601Date,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "2000-01-01"
+                        }
+
                         it("ISO8601") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .ISO8601,
@@ -383,6 +399,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: frFRLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "1 janvier 2000"
+                        }
+
+                        it("NoTimeIso8601Date") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noTimeIso8601Date,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "2000-01-01"
                         }
 
                         it("ISO8601") {
@@ -497,6 +521,14 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "2. Januar 2000"
                         }
 
+                        it("NoTimeIso8601Date") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noTimeIso8601Date,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "2000-01-02"
+                        }
+
                         it("ISO8601") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .ISO8601,
@@ -594,6 +626,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: enUSLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "January 2, 2000"
+                        }
+
+                        it("NoTimeIso8601Date") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noTimeIso8601Date,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "2000-01-02"
                         }
 
                         it("ISO8601") {
@@ -695,6 +735,14 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "2 janvier 2000"
                         }
 
+                        it("NoTimeIso8601Date") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noTimeIso8601Date,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "2000-01-02"
+                        }
+
                         it("ISO8601") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .ISO8601,
@@ -777,6 +825,15 @@ final class DateFormatterTests: QuickSpec {
                                 expect(result) == "Gestern"
                             }
 
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: deDELocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
+                            }
+
                             it("ISO8601") {
                                 let result = SHDateFormatter.shared.string(from: testDate,
                                                                            format: .ISO8601,
@@ -852,6 +909,15 @@ final class DateFormatterTests: QuickSpec {
                                 expect(result) == "Yesterday"
                             }
 
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: enUSLocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
+                            }
+
                             it("ISO8601") {
                                 let result = SHDateFormatter.shared.string(from: testDate,
                                                                            format: .ISO8601,
@@ -925,6 +991,15 @@ final class DateFormatterTests: QuickSpec {
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
                                 expect(result) == "hier"
+                            }
+
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: frFRLocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
                             }
 
                             it("ISO8601") {
@@ -1009,6 +1084,15 @@ final class DateFormatterTests: QuickSpec {
                                 expect(result) == "Heute"
                             }
 
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: deDELocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
+                            }
+
                             it("ISO8601") {
                                 let result = SHDateFormatter.shared.string(from: testDate,
                                                                            format: .ISO8601,
@@ -1084,6 +1168,15 @@ final class DateFormatterTests: QuickSpec {
                                 expect(result) == "Today"
                             }
 
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: enUSLocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
+                            }
+
                             it("ISO8601") {
                                 let result = SHDateFormatter.shared.string(from: testDate,
                                                                            format: .ISO8601,
@@ -1157,6 +1250,15 @@ final class DateFormatterTests: QuickSpec {
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
                                 expect(result) == "aujourd’hui"
+                            }
+
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: frFRLocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
                             }
 
                             it("ISO8601") {
@@ -1241,6 +1343,15 @@ final class DateFormatterTests: QuickSpec {
                                 expect(result) == "Morgen"
                             }
 
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: deDELocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
+                            }
+
                             it("ISO8601") {
                                 let result = SHDateFormatter.shared.string(from: testDate,
                                                                            format: .ISO8601,
@@ -1316,6 +1427,15 @@ final class DateFormatterTests: QuickSpec {
                                 expect(result) == "Tomorrow"
                             }
 
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: enUSLocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
+                            }
+
                             it("ISO8601") {
                                 let result = SHDateFormatter.shared.string(from: testDate,
                                                                            format: .ISO8601,
@@ -1389,6 +1509,15 @@ final class DateFormatterTests: QuickSpec {
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
                                 expect(result) == "demain"
+                            }
+
+                            it("NoTimeIso8601Date") {
+                                let result = SHDateFormatter.shared.string(from: testDate,
+                                                                           format: .noTimeIso8601Date,
+                                                                           locale: frFRLocale,
+                                                                           timeZone: gmtZone,
+                                                                           needsRelativeFormatting: true)
+                                expect(result) == ""
                             }
 
                             it("ISO8601") {

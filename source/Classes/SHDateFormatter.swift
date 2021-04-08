@@ -18,6 +18,7 @@ public enum SHDateFormat: String {
     case noTimeShortDateNoYear      = "d.M."
     case noTimeShortDate
     case noTimeLongDate
+    case noTimeIso8601Date          = "YYYY'-'MM'-'dd"
     /**
      * The only correct date format for client/server communication.
      * http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/
@@ -71,6 +72,10 @@ public struct SHDateFormatter {
         case .noTimeLongDate:
             SHDateFormatter.formatter.timeStyle = .none
             SHDateFormatter.formatter.dateStyle = .long
+
+        case .noTimeIso8601Date:
+            SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
+            SHDateFormatter.formatter.dateFormat = format.rawValue
 
         case .ISO8601:
             SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
