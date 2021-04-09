@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Exclude info plist in package manifest - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.6.2] - 2021-04-08
 * [#25](https://github.com/Blackjacx/SHDateFormatter/pull/25): Add notimeiso8601date format - [@stherold](https://github.com/stherold).
