@@ -10,14 +10,10 @@ let package = Package(
         // .watchOS(.v3)
     ],
     products: [
-        .library(
-            name: "SHDateFormatter",
-            targets: ["SHDateFormatter"])
+        .library(name: "SHDateFormatter", targets: ["SHDateFormatter"])
     ],
     targets: [
-        .target(
-            name: "SHDateFormatter",
-            path: "source")
+        .target(name: "SHDateFormatter", path: "source", exclude: ["Info.plist"])
     ],
     swiftLanguageVersions: [.v5]
 )

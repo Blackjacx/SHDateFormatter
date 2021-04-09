@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.6.3] - 2021-04-09Z
+* Exclude info plist in package manifest - [@blackjacx](https://github.com/blackjacx).
+
+## [1.6.2] - 2021-04-08
+* [#25](https://github.com/Blackjacx/SHDateFormatter/pull/25): Add notimeiso8601date format - [@stherold](https://github.com/stherold).
+
 ## [1.6.1] - 2021-02-23
 * Xcode 12.4 migrations - [@blackjacx](https://github.com/blackjacx).
 * Disables SwiftLint - [@blackjacx](https://github.com/blackjacx).
