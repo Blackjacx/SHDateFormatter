@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.6.3] - 2021-04-09Z
 * Exclude info plist in package manifest - [@blackjacx](https://github.com/blackjacx).
 
 ## [1.6.2] - 2021-04-08
