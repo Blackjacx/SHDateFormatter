@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.4
 import PackageDescription
 
 let package = Package(
     name: "SHDateFormatter",
     platforms: [
         // .macOS(.v10_12),
-        .iOS(.v9),
+        .iOS(.v10),
         // .tvOS(.v10),
         // .watchOS(.v3)
     ],

@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.6.4] - 2022-02-02Z
+* Replace ISO8601 format by ISO8601DateFormatter - [@Blackjacx](https://github.com/blackjacx).
+* Update Deployment target to 10.0 - [@Blackjacx](https://github.com/blackjacx).
+* Update to Swift 5.4 - [@Blackjacx](https://github.com/blackjacx).
+* Remove Cocoapods and transfer Pods to SPM - [@Blackjacx](https://github.com/blackjacx).
+* Disable framework code signing - [@Blackjacx](https://github.com/blackjacx).
+
 ## [1.6.3] - 2021-04-09Z
 * Exclude info plist in package manifest - [@blackjacx](https://github.com/blackjacx).
 

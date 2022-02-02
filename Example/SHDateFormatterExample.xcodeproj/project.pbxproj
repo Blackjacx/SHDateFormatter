@@ -121,7 +121,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = CodingCobra;
+				ORGANIZATIONNAME = "Stefan Herold";
 				TargetAttributes = {
 					B9C8325C21C84F3D0008ED90 = {
 						CreatedOnToolsVersion = 10.1;
@@ -321,13 +321,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PCW579R278;
+				DEVELOPMENT_TEAM = 7CJ9S4HYPJ;
 				INFOPLIST_FILE = source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.SHDateFormatterExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stherold.SHDateFormatterExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,13 +338,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PCW579R278;
+				DEVELOPMENT_TEAM = 7CJ9S4HYPJ;
 				INFOPLIST_FILE = source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.SHDateFormatterExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stherold.SHDateFormatterExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
