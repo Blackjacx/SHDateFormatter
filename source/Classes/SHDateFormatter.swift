@@ -18,13 +18,16 @@ public enum SHDateFormat: String {
     case noTimeShortDateNoYear      = "d.M."
     case noTimeShortDate
     case noTimeLongDate
+    /// - note: Ignores relative formatting
     case noTimeIso8601Date          = "YYYY'-'MM'-'dd"
     /**
-     * The only correct date format for client/server communication.
+     * We use the `ISO8601DateFormatter` since it is able to generate valid
+     * dates from a range of ISO8601 date format strings.
      * http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/
      * https://developer.apple.com/library/ios/qa/qa1480/_index.html
+     * - note: Ignores relative formatting
      */
-    case ISO8601                    = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+    case ISO8601
 }
 
 public struct SHDateFormatter {
@@ -38,6 +41,7 @@ public struct SHDateFormatter {
     }
 
     static let formatter = DateFormatter()
+    static let iso8601Formatter = ISO8601DateFormatter()
     static let serialDispatchQueue = DispatchQueue(label: "com.dateFormatter.globalSerialDispatchQueue")
 
     private init() {}
@@ -78,9 +82,7 @@ public struct SHDateFormatter {
             SHDateFormatter.formatter.dateFormat = format.rawValue
 
         case .ISO8601:
-            SHDateFormatter.formatter.locale = Locale(identifier: "en_US_POSIX")
-            SHDateFormatter.formatter.dateFormat = format.rawValue
-            SHDateFormatter.formatter.timeZone = TimeZone.GMT
+            break
         }
 
         if needsRelativeFormatting {
@@ -105,7 +107,7 @@ public struct SHDateFormatter {
      * - parameter format: The format used for the conversion.
      * - parameter locale: The locale used for the conversion.
      * - parameter timeZone: The timeZone used for the conversion.
-     * - parameter needsRelativeFormatting: Use relative formating when set to true.
+     * - parameter needsRelativeFormatting: Use relative formatting when set to true.
      * - returns: A String object representing the date.
      */
     public func string(from date: Date?,
@@ -119,13 +121,26 @@ public struct SHDateFormatter {
             return dateString
         }
 
-        SHDateFormatter.serialDispatchQueue.sync {
-            configureForDateFormat(format: format,
-                                   locale: locale,
-                                   timeZone: timeZone,
-                                   needsRelativeFormatting: needsRelativeFormatting)
-            dateString = SHDateFormatter.formatter.string(from: date)
+        switch format {
+        case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .shortYear,
+                .longYear, .shortYearMonth, .longYearMonth, .shortTimeNoDate,
+                .shortTimeMediumDate, .noTimeShortDateNoYear, .noTimeShortDate,
+                .noTimeLongDate, .noTimeIso8601Date:
+
+            SHDateFormatter.serialDispatchQueue.sync {
+                configureForDateFormat(format: format,
+                                       locale: locale,
+                                       timeZone: timeZone,
+                                       needsRelativeFormatting: needsRelativeFormatting)
+                dateString = SHDateFormatter.formatter.string(from: date)
+            }
+
+        case .ISO8601:
+            if !needsRelativeFormatting {
+                dateString = Self.iso8601Formatter.string(from: date)
+            }
         }
+
         return dateString
     }
 
@@ -151,11 +166,22 @@ public struct SHDateFormatter {
         }
 
         SHDateFormatter.serialDispatchQueue.sync {
-            configureForDateFormat(format: format,
-                                   locale: locale,
-                                   timeZone: timeZone,
-                                   needsRelativeFormatting: needsRelativeFormatting)
-            date = SHDateFormatter.formatter.date(from: dateString)
+
+            switch format {
+            case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .shortYear,
+                    .longYear, .shortYearMonth, .longYearMonth, .shortTimeNoDate,
+                    .shortTimeMediumDate, .noTimeShortDateNoYear, .noTimeShortDate,
+                    .noTimeLongDate, .noTimeIso8601Date:
+
+                configureForDateFormat(format: format,
+                                       locale: locale,
+                                       timeZone: timeZone,
+                                       needsRelativeFormatting: needsRelativeFormatting)
+                date = Self.formatter.date(from: dateString)
+
+            case .ISO8601:
+                date = Self.iso8601Formatter.date(from: dateString)
+            }
         }
         return date
     }
