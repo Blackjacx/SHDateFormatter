@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
 
     s.source_files = 'source/Classes/**/*'
-    s.swift_versions = ['5.0']
+    s.swift_versions = ['5.4']
 
     # s.resource_bundles = {
     #     'SHDateFormatter' => ['source/Strings/*.lproj/*.strings']
