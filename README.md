@@ -30,7 +30,7 @@ This framework supports encoding as well as decoding many different date and tim
 * `noTimeShortDate`         => 12/02/2018
 * `noTimeLongDate`          => December 2, 2018
 * `noTimeRelativeDate`      => Today, Tomorrow, ...
-* `ISO8601`                 => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+* `ISO8601`                 => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'" / "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+01:00'" / etc. 
 
 The `ISO8601` format implements the standard for working with dates and times between client and server applications. A good explanation if this standard and how to work with it can be found in the [Apple Documenation](https://developer.apple.com/library/ios/qa/qa1480/_index.html) or on [Ole Begemanns Blog](http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/).
 
