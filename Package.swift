@@ -5,7 +5,7 @@ let package = Package(
     name: "SHDateFormatter",
     platforms: [
         // .macOS(.v10_12),
-        .iOS(.v9),
+        .iOS(.v10),
         // .tvOS(.v10),
         // .watchOS(.v3)
     ],
