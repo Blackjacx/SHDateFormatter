@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.6.4] - 2022-02-02Z
 * Replace ISO8601 format by ISO8601DateFormatter - [@Blackjacx](https://github.com/blackjacx).
 * Update Deployment target to 10.0 - [@Blackjacx](https://github.com/blackjacx).
 * Update to Swift 5.4 - [@Blackjacx](https://github.com/blackjacx).
