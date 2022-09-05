@@ -4,7 +4,7 @@
 
 # SHDateFormatter
 
-[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacx)
+[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacxxx)
 <a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" /></a>
 <img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
 <img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
