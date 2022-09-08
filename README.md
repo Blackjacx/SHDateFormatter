@@ -47,6 +47,31 @@ it, simply add the following line to your Podfile:
 pod 'SHDateFormatter'
 ```
 
+## Code Documentation
+
+The [code documentation](https://swiftpackageindex.com/Blackjacx/SHDateFormatter/develop/documentation/shdateformatter) is generated and hosted by [Swift Package Index](https://swiftpackageindex.com/) (powered by [DocC](https://developer.apple.com/documentation/docc))
+
+## Release
+
+To release this Swift package the following steps have to be taken:
+- Create a new branch `release-x.y.z`
+- Run `bash <(curl -H -s https://raw.githubusercontent.com/Blackjacx/Scripts/master/frameworks/bootstrap.sh)` to update to the latest shared development files
+- Run `bundle update` to update all Ruby gems
+- Commit all changes, make a PR and merge it to develop
+- Run `bundle exec fastlane release framework:"SHDateFormatter" version:"x.y.z"` to release the new version
+- Post the following on Twitter
+```
+SHDateFormatter release x.y.z 🎉
+
+▸ 🚀  SHDateFormatter (x.y.z) successfully published
+▸ 📅  September 2nd
+▸ 🌎  https://swiftpackageindex.com/Blackjacx/SHDateFormatter
+▸ 🌎  https://github.com/Blackjacx/SHDateFormatter/releases/latest
+▸ 👍  Tell your friends!
+
+#SPM #DateFormatter #CustomDates #Tests
+```
+
 ## Contribution
 
 - If you found a **bug**, please open an **issue**.
