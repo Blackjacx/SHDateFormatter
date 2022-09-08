@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* [#29](https://github.com/Blackjacx/SHDateFormatter/pull/29): Remove Cocoapods and Carthage - [@stherold](https://github.com/stherold).
 
 ## [1.6.4] - 2022-02-02Z
 * Replace ISO8601 format by ISO8601DateFormatter - [@Blackjacx](https://github.com/blackjacx).
