@@ -4,16 +4,20 @@ import PackageDescription
 let package = Package(
     name: "SHDateFormatter",
     platforms: [
-        // .macOS(.v10_12),
-        .iOS(.v10),
-        // .tvOS(.v10),
-        // .watchOS(.v3)
+        .macOS(.v11),
+        .iOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v5),
     ],
     products: [
         .library(name: "SHDateFormatter", targets: ["SHDateFormatter"])
     ],
-    targets: [
-        .target(name: "SHDateFormatter", path: "source", exclude: ["Info.plist"])
+    dependencies: [
+        .package(url: "https://github.com/Quick/Quick", from: "5.0.0"),
+        .package(url: "https://github.com/Quick/Nimble", from: "10.0.0"),
     ],
-    swiftLanguageVersions: [.v5]
+    targets: [
+        .target(name: "SHDateFormatter", exclude: ["Info.plist"]),
+        .testTarget(name: "SHDateFormatterTests", dependencies: ["SHDateFormatter", "Quick", "Nimble"], exclude: ["Info.plist"]),
+    ]
 )
