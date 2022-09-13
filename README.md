@@ -4,19 +4,16 @@
 
 # SHDateFormatter
 
+<!-- [![Test](https://github.com/Blackjacx/SHDateFormatter/actions/workflows/test.yml/badge.svg)](https://github.com/Blackjacx/SHDateFormatter/actions/workflows/test.yml) -->
 [![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacxxx)
-<a href="https://github.com/Blackjacx/SHDateFormatter/actions?query=workflow%3ACI"><img alt="CI status" src="https://github.com/blackjacx/SHDateFormatter/workflows/CI/badge.svg" /></a>
-<img alt="Github Current Release" src="https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg" /> 
-<img alt="Cocoapods Platforms" src="https://img.shields.io/cocoapods/p/SHDateFormatter.svg" />
-<img alt="Xcode 13+" src="https://img.shields.io/badge/Xcode-13.0%2B-blue.svg" />
-<img alt="iOS 10.0+" src="https://img.shields.io/badge/iOS-10.0%2B-blue.svg" />
-<img alt="Swift 5.4+" src="https://img.shields.io/badge/Swift-5.4%2B-orange.svg" />
-<img alt="Github Repo Size" src="https://img.shields.io/github/repo-size/blackjacx/SHDateFormatter.svg" />
-<img alt="Github Code Size" src="https://img.shields.io/github/languages/code-size/blackjacx/SHDateFormatter.svg" />
-<img alt="Github Closed PR's" src="https://img.shields.io/github/issues-pr-closed/blackjacx/SHDateFormatter.svg" />
-<a href="https://github.com/Blackjacx/SHDateFormatter/blob/develop/LICENSE?raw=true"><img alt="License" src="https://img.shields.io/cocoapods/l/SHDateFormatter.svg?style=flat" /></a>
-<a href="https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e" /></a>
-<a href="https://www.paypal.me/STHEROLD"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg"/></a>
+[![Github Current Release](https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg)](https://github.com/blackjacx/SHDateFormatter/releases)
+[![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![Swift Versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FBlackjacx%2FSHDateFormatter%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/Blackjacx/SHDateFormatter)
+[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FBlackjacx%2FSHDateFormatter%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/Blackjacx/SHDateFormatter)
+[![Xcode 13+](https://img.shields.io/badge/Xcode-13%2B-blue.svg)](https://developer.apple.com/download/)
+[![Codebeat](https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e)](https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop)
+[![License](https://img.shields.io/github/license/blackjacx/SHDateFormatter.svg)](https://github.com/blackjacx/SHDateFormatter/blob/develop/LICENSE)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/STHEROLD)
 
 This framework supports encoding as well as decoding many different date and time format. At the moment the following are supported (see SHDateFormat): 
 
@@ -40,11 +37,43 @@ Additionally the following convenience functions are available on the SHDateForm
 
 ## Installation
 
-SHDateFormatter is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### [Swift Package Manager](https://swift.org/package-manager/)
 
-```ruby
-pod 'SHDateFormatter'
+In Xcode open your target list and select your project. Click the tab `Swift  Packages` and there the small `+` icon. Enter the URL of this repository, select the version you want to install - usually the preset is okay - and confirm.
+
+### [CocoaPods](http://cocoapods.org)
+
+I dropped CocoaPods support in favor of SPM from version `1.7.0`. 
+Please integrate the package via SPM (see above).
+
+### Carthage
+
+I dropped Carthage support in favor of SPM from version `1.7.0`. 
+Please integrate the package via SPM (see above).
+
+## Code Documentation
+
+The [code documentation](https://swiftpackageindex.com/Blackjacx/SHDateFormatter/develop/documentation/shdateformatter) is generated and hosted by [Swift Package Index](https://swiftpackageindex.com/) (powered by [DocC](https://developer.apple.com/documentation/docc))
+
+## Release
+
+To release this Swift package the following steps have to be taken:
+- Create a new branch `release-x.y.z`
+- Run `bash <(curl -H -s https://raw.githubusercontent.com/Blackjacx/Scripts/master/frameworks/bootstrap.sh)` to update to the latest shared development files
+- Run `bundle update` to update all Ruby gems
+- Commit all changes, make a PR and merge it to develop
+- Run `bundle exec fastlane release framework:"SHDateFormatter" version:"x.y.z"` to release the new version
+- Post the following on Twitter
+```
+SHDateFormatter release x.y.z 🎉
+
+▸ 🚀  SHDateFormatter (x.y.z) successfully published
+▸ 📅  September 2nd
+▸ 🌎  https://swiftpackageindex.com/Blackjacx/SHDateFormatter
+▸ 🌎  https://github.com/Blackjacx/SHDateFormatter/releases/latest
+▸ 👍  Tell your friends!
+
+#SPM #DateFormatter #CustomDates #Tests
 ```
 
 ## Contribution
@@ -59,4 +88,4 @@ pod 'SHDateFormatter'
 
 ## License
 
-Source is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+SHDateFormatter is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
