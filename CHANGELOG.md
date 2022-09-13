@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.7.0] - 2022-09-13Z
 * [#29](https://github.com/Blackjacx/SHDateFormatter/pull/29): Remove Cocoapods and Carthage - [@stherold](https://github.com/stherold).
 
 ## [1.6.4] - 2022-02-02Z
