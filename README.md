@@ -37,12 +37,19 @@ Additionally the following convenience functions are available on the SHDateForm
 
 ## Installation
 
-SHDateFormatter is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### [Swift Package Manager](https://swift.org/package-manager/)
 
-```ruby
-pod 'SHDateFormatter'
-```
+In Xcode open your target list and select your project. Click the tab `Swift  Packages` and there the small `+` icon. Enter the URL of this repository, select the version you want to install - usually the preset is okay - and confirm.
+
+### [CocoaPods](http://cocoapods.org)
+
+I dropped CocoaPods support in favor of SPM from version `1.7.0`. 
+Please integrate the package via SPM (see above).
+
+### Carthage
+
+I dropped Carthage support in favor of SPM from version `1.7.0`. 
+Please integrate the package via SPM (see above).
 
 ## Code Documentation
 
@@ -81,4 +88,4 @@ SHDateFormatter release x.y.z 🎉
 
 ## License
 
-Source is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+SHDateFormatter is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
