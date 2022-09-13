@@ -73,7 +73,7 @@ SHDateFormatter release x.y.z 🎉
 ▸ 🌎  https://github.com/Blackjacx/SHDateFormatter/releases/latest
 ▸ 👍  Tell your friends!
 
-#SPM #DateFormatter #CustomDates #Tests
+#SPM #Date #Formatter #tested
 ```
 
 ## Contribution
