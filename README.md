@@ -86,6 +86,14 @@ SHDateFormatter release x.y.z 🎉
 
 [Stefan Herold](mailto:stefan.herold@gmail.com) • 🐦 [@Blackjacxxx](https://twitter.com/Blackjacxxx)
 
+## Contributors
+
+Thanks to all of you who are part of this:
+
+<a href="https://github.com/blackjacx/SHDateFormatter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=blackjacx/SHDateFormatter" />
+</a>
+
 ## License
 
 SHDateFormatter is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
