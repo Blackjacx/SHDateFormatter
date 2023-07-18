@@ -13,6 +13,7 @@ public enum SHDateFormat: String {
     case longYear                   = "yyyy"
     case shortYearMonth             = "MMM yy"
     case longYearMonth              = "MMMM yyyy"
+    case noDayShortMonthShortYear   = "MM yy"
     case shortTimeNoDate
     case shortTimeMediumDate
     case noTimeShortDateNoYear      = "d.M."
@@ -56,7 +57,7 @@ public struct SHDateFormatter {
 
         switch format {
         case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .longYear, .shortYear, .noTimeShortDateNoYear,
-             .shortYearMonth, .longYearMonth:
+                .shortYearMonth, .longYearMonth, .noDayShortMonthShortYear:
             SHDateFormatter.formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue,
                                                                             options: 0,
                                                                             locale: locale)
@@ -123,7 +124,7 @@ public struct SHDateFormatter {
 
         switch format {
         case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .shortYear,
-                .longYear, .shortYearMonth, .longYearMonth, .shortTimeNoDate,
+                .longYear, .shortYearMonth, .longYearMonth, .noDayShortMonthShortYear, .shortTimeNoDate,
                 .shortTimeMediumDate, .noTimeShortDateNoYear, .noTimeShortDate,
                 .noTimeLongDate, .noTimeIso8601Date:
 
@@ -169,7 +170,7 @@ public struct SHDateFormatter {
 
             switch format {
             case .shortWeekday, .longWeekday, .shortMonth, .longMonth, .shortYear,
-                    .longYear, .shortYearMonth, .longYearMonth, .shortTimeNoDate,
+                    .longYear, .shortYearMonth, .longYearMonth, .noDayShortMonthShortYear, .shortTimeNoDate,
                     .shortTimeMediumDate, .noTimeShortDateNoYear, .noTimeShortDate,
                     .noTimeLongDate, .noTimeIso8601Date:
 
