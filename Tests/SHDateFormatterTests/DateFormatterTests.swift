@@ -147,6 +147,14 @@ final class DateFormatterTests: QuickSpec {
                             expect(result) == "2000"
                         }
 
+                        it("NoDayShortMonthShortYear") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noDayShortMonthShortYear,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "01.00"
+                        }
+                        
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
                                                                        format: .shortTimeNoDate,
@@ -252,6 +260,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: enUSLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "2000"
+                        }
+                        
+                        it("NoDayShortMonthShortYear") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noDayShortMonthShortYear,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "01/00"
                         }
 
                         it("ShortTimeNoDate") {
@@ -359,6 +375,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: frFRLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "2000"
+                        }
+                        
+                        it("NoDayShortMonthShortYear") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noDayShortMonthShortYear,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "01/00"
                         }
 
                         it("ShortTimeNoDate") {
@@ -480,6 +504,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        timeZone: gmtZone)
                             expect(result) == "2000"
                         }
+                        
+                        it("NoDayShortMonthShortYear") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noDayShortMonthShortYear,
+                                                                       locale: deDELocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "01.00"
+                        }
 
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
@@ -587,6 +619,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        timeZone: gmtZone)
                             expect(result) == "2000"
                         }
+                        
+                        it("NoDayShortMonthShortYear") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noDayShortMonthShortYear,
+                                                                       locale: enUSLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "01/00"
+                        }
 
                         it("ShortTimeNoDate") {
                             let result = SHDateFormatter.shared.string(from: testDate,
@@ -693,6 +733,14 @@ final class DateFormatterTests: QuickSpec {
                                                                        locale: frFRLocale,
                                                                        timeZone: gmtZone)
                             expect(result) == "2000"
+                        }
+                        
+                        it("NoDayShortMonthShortYear") {
+                            let result = SHDateFormatter.shared.string(from: testDate,
+                                                                       format: .noDayShortMonthShortYear,
+                                                                       locale: frFRLocale,
+                                                                       timeZone: gmtZone)
+                            expect(result) == "01/00"
                         }
 
                         it("ShortTimeNoDate") {
