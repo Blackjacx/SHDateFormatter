@@ -1,11 +1,5 @@
-<!-- <p align="center">
-<img src="./icon.png" alt="Source" height="128" width="128">
-</p> -->
-
-# SHDateFormatter
-
 <!-- [![Test](https://github.com/Blackjacx/SHDateFormatter/actions/workflows/test.yml/badge.svg)](https://github.com/Blackjacx/SHDateFormatter/actions/workflows/test.yml) -->
-[![Twitter](https://img.shields.io/twitter/follow/blackjacxxx?label=%40Blackjacxxx)](https://twitter.com/blackjacxxx)
+[![Twitter Follow](https://img.shields.io/badge/follow-%40blackjacx-1DA1F2?logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fblackjacx&screen_name=Blackjacxxx)
 [![Github Current Release](https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg)](https://github.com/blackjacx/SHDateFormatter/releases)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 [![Swift Versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FBlackjacx%2FSHDateFormatter%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/Blackjacx/SHDateFormatter)
@@ -13,7 +7,13 @@
 [![Xcode 13+](https://img.shields.io/badge/Xcode-13%2B-blue.svg)](https://developer.apple.com/download/)
 [![Codebeat](https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e)](https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop)
 [![License](https://img.shields.io/github/license/blackjacx/SHDateFormatter.svg)](https://github.com/blackjacx/SHDateFormatter/blob/develop/LICENSE)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/STHEROLD)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal&style=for-the-badge)](https://www.paypal.me/STHEROLD)
+
+<!-- <p align="center">
+<img src="./icon.png" alt="Source" height="128" width="128">
+</p> -->
+
+# SHDateFormatter
 
 This framework supports encoding as well as decoding many different date and time format. At the moment the following are supported (see SHDateFormat): 
 
@@ -73,7 +73,7 @@ SHDateFormatter release x.y.z 🎉
 ▸ 🌎  https://github.com/Blackjacx/SHDateFormatter/releases/latest
 ▸ 👍  Tell your friends!
 
-#SPM #DateFormatter #CustomDates #Tests
+#SPM #Date #Formatter #tested
 ```
 
 ## Contribution
@@ -85,6 +85,14 @@ SHDateFormatter release x.y.z 🎉
 ## Author
 
 [Stefan Herold](mailto:stefan.herold@gmail.com) • 🐦 [@Blackjacxxx](https://twitter.com/Blackjacxxx)
+
+## Contributors
+
+Thanks to all of you who are part of this:
+
+<a href="https://github.com/blackjacx/SHDateFormatter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=blackjacx/SHDateFormatter" />
+</a>
 
 ## License
 
