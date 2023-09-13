@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.7.1] - 2023-09-13Z
+* [#32](https://github.com/Blackjacx/SHDateFormatter/pull/32) Add `noDayShortMonthShortYear` to `SHDateFormat` - [@turyunus](https://github.com/turyunus).
+
 ## [1.7.0] - 2022-09-13Z
 * [#29](https://github.com/Blackjacx/SHDateFormatter/pull/29): Remove Cocoapods and Carthage - [@stherold](https://github.com/stherold).
 
