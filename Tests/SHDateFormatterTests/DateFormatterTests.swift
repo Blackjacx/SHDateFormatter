@@ -275,7 +275,7 @@ final class DateFormatterTests: QuickSpec {
                                                                        format: .shortTimeNoDate,
                                                                        locale: enUSLocale,
                                                                        timeZone: gmtZone)
-                            expect(result) == "12:00 AM"
+                            expect(result) == "12:00 AM"
                         }
 
                         it("ShortTimeMediumDate") {
@@ -283,7 +283,7 @@ final class DateFormatterTests: QuickSpec {
                                                                        format: .shortTimeMediumDate,
                                                                        locale: enUSLocale,
                                                                        timeZone: gmtZone)
-                            expect(result) == "Jan 1, 2000 at 12:00 AM"
+                            expect(result) == "Jan 1, 2000 at 12:00 AM"
                         }
 
                         it("NoTimeShortDateNoYear") {
@@ -633,7 +633,7 @@ final class DateFormatterTests: QuickSpec {
                                                                        format: .shortTimeNoDate,
                                                                        locale: enUSLocale,
                                                                        timeZone: gmtZone)
-                            expect(result) == "12:00 PM"
+                            expect(result) == "12:00 PM"
                         }
 
                         it("ShortTimeMediumDate") {
@@ -641,7 +641,7 @@ final class DateFormatterTests: QuickSpec {
                                                                        format: .shortTimeMediumDate,
                                                                        locale: enUSLocale,
                                                                        timeZone: gmtZone)
-                            expect(result) == "Jan 2, 2000 at 12:00 PM"
+                            expect(result) == "Jan 2, 2000 at 12:00 PM"
                         }
 
                         it("NoTimeShortDateNoYear") {
@@ -918,7 +918,7 @@ final class DateFormatterTests: QuickSpec {
                                                                            locale: enUSLocale,
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
-                                expect(result) == "12:00 PM"
+                                expect(result) == "12:00 PM"
                             }
 
                             it("ShortTimeMediumDate") {
@@ -927,7 +927,7 @@ final class DateFormatterTests: QuickSpec {
                                                                            locale: enUSLocale,
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
-                                expect(result) == "Yesterday at 12:00 PM"
+                                expect(result) == "Yesterday at 12:00 PM"
                             }
 
                             it("NoTimeShortDateNoYear") {
@@ -1177,7 +1177,7 @@ final class DateFormatterTests: QuickSpec {
                                                                            locale: enUSLocale,
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
-                                expect(result) == "12:00 PM"
+                                expect(result) == "12:00 PM"
                             }
 
                             it("ShortTimeMediumDate") {
@@ -1186,7 +1186,7 @@ final class DateFormatterTests: QuickSpec {
                                                                            locale: enUSLocale,
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
-                                expect(result) == "Today at 12:00 PM"
+                                expect(result) == "Today at 12:00 PM"
                             }
 
                             it("NoTimeShortDateNoYear") {
@@ -1436,7 +1436,7 @@ final class DateFormatterTests: QuickSpec {
                                                                            locale: enUSLocale,
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
-                                expect(result) == "12:00 PM"
+                                expect(result) == "12:00 PM"
                             }
 
                             it("ShortTimeMediumDate") {
@@ -1445,7 +1445,7 @@ final class DateFormatterTests: QuickSpec {
                                                                            locale: enUSLocale,
                                                                            timeZone: gmtZone,
                                                                            needsRelativeFormatting: true)
-                                expect(result) == "Tomorrow at 12:00 PM"
+                                expect(result) == "Tomorrow at 12:00 PM"
                             }
 
                             it("NoTimeShortDateNoYear") {
