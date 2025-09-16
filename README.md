@@ -1,11 +1,11 @@
 <!-- [![Test](https://github.com/Blackjacx/SHDateFormatter/actions/workflows/test.yml/badge.svg)](https://github.com/Blackjacx/SHDateFormatter/actions/workflows/test.yml) -->
+
 [![Twitter Follow](https://img.shields.io/badge/follow-%40blackjacx-1DA1F2?logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fblackjacx&screen_name=Blackjacxxx)
 [![Github Current Release](https://img.shields.io/github/release/blackjacx/SHDateFormatter.svg)](https://github.com/blackjacx/SHDateFormatter/releases)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 [![Swift Versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FBlackjacx%2FSHDateFormatter%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/Blackjacx/SHDateFormatter)
 [![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FBlackjacx%2FSHDateFormatter%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/Blackjacx/SHDateFormatter)
 [![Xcode 13+](https://img.shields.io/badge/Xcode-13%2B-blue.svg)](https://developer.apple.com/download/)
-[![Codebeat](https://codebeat.co/badges/c74826a3-8f8b-41da-8daf-2bdfecc2163e)](https://codebeat.co/projects/github-com-blackjacx-shdateformatter-develop)
 [![License](https://img.shields.io/github/license/blackjacx/SHDateFormatter.svg)](https://github.com/blackjacx/SHDateFormatter/blob/develop/LICENSE)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal&style=for-the-badge)](https://www.paypal.me/STHEROLD)
 
@@ -15,25 +15,26 @@
 
 # SHDateFormatter
 
-This framework supports encoding as well as decoding many different date and time format. At the moment the following are supported (see SHDateFormat): 
+This framework supports encoding as well as decoding many different date and time format. At the moment the following are supported (see SHDateFormat):
 
-* `shortWeekday`            => Sun, Mon, Tue, ...
-* `longWeekday`             => Sunday, Monday, Tuesday, ...
-* `shortMonth`              => Jan, Feb, ...
-* `longMonth`               => January, February, ...
-* `shortTimeNoDate`         => 12:00 PM, 1:00 AM
-* `shortTimeMediumDate`     => Jan 1, 2000 at 12:00 AM
-* `noTimeShortDateNoYear`   => 12/31
-* `noTimeShortDate`         => 12/02/2018
-* `noTimeLongDate`          => December 2, 2018
-* `noTimeRelativeDate`      => Today, Tomorrow, ...
-* `ISO8601`                 => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'" / "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+01:00'" / etc. 
+- `shortWeekday` => Sun, Mon, Tue, ...
+- `longWeekday` => Sunday, Monday, Tuesday, ...
+- `shortMonth` => Jan, Feb, ...
+- `longMonth` => January, February, ...
+- `shortTimeNoDate` => 12:00 PM, 1:00 AM
+- `shortTimeMediumDate` => Jan 1, 2000 at 12:00 AM
+- `noTimeShortDateNoYear` => 12/31
+- `noTimeShortDate` => 12/02/2018
+- `noTimeLongDate` => December 2, 2018
+- `noTimeRelativeDate` => Today, Tomorrow, ...
+- `ISO8601` => "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'" / "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+01:00'" / etc.
 
 The `ISO8601` format implements the standard for working with dates and times between client and server applications. A good explanation if this standard and how to work with it can be found in the [Apple Documenation](https://developer.apple.com/library/ios/qa/qa1480/_index.html) or on [Ole Begemanns Blog](http://oleb.net/blog/2011/11/working-with-date-and-time-in-cocoa-part-2/).
 
 Additionally the following convenience functions are available on the SHDateFormatter sharedInstance which will return default values if the input date is nil. They allow to easily deal with optionals and can provide additional functionality like giving you a relative date instead of e.g. "yyyy/MM/dd":
-* `localizedTimeStringFromDate(_:)` - will return `--:--` per default
-* ... to be continued ...
+
+- `localizedTimeStringFromDate(_:)` - will return `--:--` per default
+- ... to be continued ...
 
 ## Installation
 
@@ -43,12 +44,12 @@ In Xcode open your target list and select your project. Click the tab `Swift  Pa
 
 ### [CocoaPods](http://cocoapods.org)
 
-I dropped CocoaPods support in favor of SPM from version `1.7.0`. 
+I dropped CocoaPods support in favor of SPM from version `1.7.0`.
 Please integrate the package via SPM (see above).
 
 ### Carthage
 
-I dropped Carthage support in favor of SPM from version `1.7.0`. 
+I dropped Carthage support in favor of SPM from version `1.7.0`.
 Please integrate the package via SPM (see above).
 
 ## Code Documentation
@@ -58,12 +59,14 @@ The [code documentation](https://swiftpackageindex.com/Blackjacx/SHDateFormatter
 ## Release
 
 To release this Swift package the following steps have to be taken:
+
 - Create a new branch `release-x.y.z`
 - Run `bash <(curl -H -s https://raw.githubusercontent.com/Blackjacx/Scripts/master/frameworks/bootstrap.sh)` to update to the latest shared development files
 - Run `bundle update` to update all Ruby gems
 - Commit all changes, make a PR and merge it to develop
 - Run `bundle exec fastlane release framework:"SHDateFormatter" version:"x.y.z"` to release the new version
 - Post the following on Twitter
+
 ```
 SHDateFormatter release x.y.z 🎉
 
