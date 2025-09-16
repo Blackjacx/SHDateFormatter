@@ -33,8 +33,35 @@
         "repositoryURL": "https://github.com/Quick/Quick",
         "state": {
           "branch": null,
-          "revision": "f9d519828bb03dfc8125467d8f7b93131951124c",
-          "version": "5.0.1"
+          "revision": "1163a1b1b114a657c7432b63dd1f92ce99fe11a6",
+          "version": "7.6.2"
+        }
+      },
+      {
+        "package": "swift-algorithms",
+        "repositoryURL": "https://github.com/apple/swift-algorithms.git",
+        "state": {
+          "branch": null,
+          "revision": "87e50f483c54e6efd60e885f7f5aa946cee68023",
+          "version": "1.2.1"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
+        "state": {
+          "branch": null,
+          "revision": "309a47b2b1d9b5e991f36961c983ecec72275be3",
+          "version": "1.6.1"
+        }
+      },
+      {
+        "package": "swift-numerics",
+        "repositoryURL": "https://github.com/apple/swift-numerics.git",
+        "state": {
+          "branch": null,
+          "revision": "bbadd4b853a33fd78c4ae977d17bb2af15eb3f2a",
+          "version": "1.1.0"
         }
       }
     ]
